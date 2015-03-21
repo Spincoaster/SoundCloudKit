@@ -12,6 +12,10 @@
 		677739A01ABC487C00E7BC8E /* SoundCloudKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6777399E1ABC487C00E7BC8E /* SoundCloudKit.h */; };
 		677739A21ABC488600E7BC8E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 677739A11ABC488600E7BC8E /* Info.plist */; };
 		677739AE1ABC541200E7BC8E /* SoundCloudKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739A41ABC488F00E7BC8E /* SoundCloudKitTests.swift */; };
+		677739C31ABD7AEF00E7BC8E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C11ABD7AEF00E7BC8E /* Alamofire.framework */; };
+		677739C41ABD7AEF00E7BC8E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C21ABD7AEF00E7BC8E /* SwiftyJSON.framework */; };
+		677739C81ABD7B3000E7BC8E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C61ABD7B3000E7BC8E /* Alamofire.framework */; };
+		677739C91ABD7B3000E7BC8E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C71ABD7B3000E7BC8E /* SwiftyJSON.framework */; };
 		67F59BF61AB9C5970018DA25 /* SoundCloudKitiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F59BEA1AB9C5960018DA25 /* SoundCloudKitiOS.framework */; };
 		67F59C2E1AB9C84A0018DA25 /* SoundCloudKitMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F59C231AB9C8490018DA25 /* SoundCloudKitMac.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +44,10 @@
 		677739A11ABC488600E7BC8E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Spec/Info.plist; sourceTree = SOURCE_ROOT; };
 		677739A31ABC488F00E7BC8E /* SoundCloudKit_MacTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundCloudKit_MacTests.swift; path = Spec/SoundCloudKit_MacTests.swift; sourceTree = SOURCE_ROOT; };
 		677739A41ABC488F00E7BC8E /* SoundCloudKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundCloudKitTests.swift; path = Spec/SoundCloudKitTests.swift; sourceTree = SOURCE_ROOT; };
+		677739C11ABD7AEF00E7BC8E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		677739C21ABD7AEF00E7BC8E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		677739C61ABD7B3000E7BC8E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		677739C71ABD7B3000E7BC8E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/Mac/SwiftyJSON.framework; sourceTree = "<group>"; };
 		67F59BEA1AB9C5960018DA25 /* SoundCloudKitiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKitiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F59BF51AB9C5970018DA25 /* SoundCloudKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundCloudKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F59C231AB9C8490018DA25 /* SoundCloudKitMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKitMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677739C31ABD7AEF00E7BC8E /* Alamofire.framework in Frameworks */,
+				677739C41ABD7AEF00E7BC8E /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677739C81ABD7B3000E7BC8E /* Alamofire.framework in Frameworks */,
+				677739C91ABD7B3000E7BC8E /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,11 +92,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		677739C51ABD7AFC00E7BC8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				677739C61ABD7B3000E7BC8E /* Alamofire.framework */,
+				677739C71ABD7B3000E7BC8E /* SwiftyJSON.framework */,
+				677739C11ABD7AEF00E7BC8E /* Alamofire.framework */,
+				677739C21ABD7AEF00E7BC8E /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		67F59BE01AB9C5960018DA25 = {
 			isa = PBXGroup;
 			children = (
 				67F59BEC1AB9C5960018DA25 /* Source */,
 				67F59BF91AB9C5970018DA25 /* Spec */,
+				677739C51ABD7AFC00E7BC8E /* Frameworks */,
 				67F59BEB1AB9C5960018DA25 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,7 +130,7 @@
 				6777399D1ABC487C00E7BC8E /* SoundCloudKit-Mac.h */,
 				6777399E1ABC487C00E7BC8E /* SoundCloudKit.h */,
 				67F59C071AB9C5F00018DA25 /* Model */,
-				67F59C061AB9C5E50018DA25 /* API */,
+				67F59C061AB9C5E50018DA25 /* Net */,
 				67F59BED1AB9C5960018DA25 /* Supporting Files */,
 			);
 			name = Source;
@@ -140,11 +164,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		67F59C061AB9C5E50018DA25 /* API */ = {
+		67F59C061AB9C5E50018DA25 /* Net */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = API;
+			name = Net;
 			sourceTree = "<group>";
 		};
 		67F59C071AB9C5F00018DA25 /* Model */ = {
@@ -458,25 +482,36 @@
 		67F59C011AB9C5970018DA25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		67F59C021AB9C5970018DA25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -518,11 +553,16 @@
 		67F59C371AB9C84A0018DA25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -535,18 +575,24 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		67F59C381AB9C84A0018DA25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -570,7 +616,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Spec/Info.plist";
+				INFOPLIST_FILE = Spec/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -587,7 +633,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Spec/Info.plist";
+				INFOPLIST_FILE = Spec/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
