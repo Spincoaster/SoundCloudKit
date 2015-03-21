@@ -16,6 +16,10 @@
 		677739C41ABD7AEF00E7BC8E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C21ABD7AEF00E7BC8E /* SwiftyJSON.framework */; };
 		677739C81ABD7B3000E7BC8E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C61ABD7B3000E7BC8E /* Alamofire.framework */; };
 		677739C91ABD7B3000E7BC8E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C71ABD7B3000E7BC8E /* SwiftyJSON.framework */; };
+		677739D11ABD898B00E7BC8E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739D01ABD898B00E7BC8E /* User.swift */; };
+		677739D21ABD898B00E7BC8E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739D01ABD898B00E7BC8E /* User.swift */; };
+		677739D91ABD8AA200E7BC8E /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 677739D81ABD8AA200E7BC8E /* user.json */; };
+		677739DA1ABD8AA200E7BC8E /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 677739D81ABD8AA200E7BC8E /* user.json */; };
 		67F59BF61AB9C5970018DA25 /* SoundCloudKitiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F59BEA1AB9C5960018DA25 /* SoundCloudKitiOS.framework */; };
 		67F59C2E1AB9C84A0018DA25 /* SoundCloudKitMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F59C231AB9C8490018DA25 /* SoundCloudKitMac.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +52,8 @@
 		677739C21ABD7AEF00E7BC8E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		677739C61ABD7B3000E7BC8E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
 		677739C71ABD7B3000E7BC8E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/Mac/SwiftyJSON.framework; sourceTree = "<group>"; };
+		677739D01ABD898B00E7BC8E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Source/User.swift; sourceTree = SOURCE_ROOT; };
+		677739D81ABD8AA200E7BC8E /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = user.json; path = Fixture/user.json; sourceTree = "<group>"; };
 		67F59BEA1AB9C5960018DA25 /* SoundCloudKitiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKitiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F59BF51AB9C5970018DA25 /* SoundCloudKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundCloudKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F59C231AB9C8490018DA25 /* SoundCloudKitMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKitMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,11 +109,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		677739D31ABD8A3100E7BC8E /* Fixture */ = {
+			isa = PBXGroup;
+			children = (
+				677739D81ABD8AA200E7BC8E /* user.json */,
+			);
+			name = Fixture;
+			sourceTree = "<group>";
+		};
 		67F59BE01AB9C5960018DA25 = {
 			isa = PBXGroup;
 			children = (
 				67F59BEC1AB9C5960018DA25 /* Source */,
 				67F59BF91AB9C5970018DA25 /* Spec */,
+				677739D31ABD8A3100E7BC8E /* Fixture */,
 				677739C51ABD7AFC00E7BC8E /* Frameworks */,
 				67F59BEB1AB9C5960018DA25 /* Products */,
 			);
@@ -174,6 +189,7 @@
 		67F59C071AB9C5F00018DA25 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				677739D01ABD898B00E7BC8E /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -320,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677739D91ABD8AA200E7BC8E /* user.json in Resources */,
 				677739A21ABC488600E7BC8E /* Info.plist in Resources */,
 				6777399C1ABC487400E7BC8E /* Info.plist in Resources */,
 			);
@@ -336,6 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677739DA1ABD8AA200E7BC8E /* user.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677739D11ABD898B00E7BC8E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677739D21ABD898B00E7BC8E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
