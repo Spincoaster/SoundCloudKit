@@ -24,6 +24,8 @@
 		677739DD1ABD8B4D00E7BC8E /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739DB1ABD8B4D00E7BC8E /* Track.swift */; };
 		677739DF1ABD8B8300E7BC8E /* track.json in Resources */ = {isa = PBXBuildFile; fileRef = 677739DE1ABD8B8300E7BC8E /* track.json */; };
 		677739E01ABD8B8300E7BC8E /* track.json in Resources */ = {isa = PBXBuildFile; fileRef = 677739DE1ABD8B8300E7BC8E /* track.json */; };
+		677739E21ABD9F7400E7BC8E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739E11ABD9F7400E7BC8E /* App.swift */; };
+		677739E31ABD9F7400E7BC8E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739E11ABD9F7400E7BC8E /* App.swift */; };
 		67F59BF61AB9C5970018DA25 /* SoundCloudKitiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F59BEA1AB9C5960018DA25 /* SoundCloudKitiOS.framework */; };
 		67F59C2E1AB9C84A0018DA25 /* SoundCloudKitMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F59C231AB9C8490018DA25 /* SoundCloudKitMac.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,7 @@
 		677739D81ABD8AA200E7BC8E /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = user.json; path = Fixture/user.json; sourceTree = "<group>"; };
 		677739DB1ABD8B4D00E7BC8E /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Track.swift; path = Source/Track.swift; sourceTree = SOURCE_ROOT; };
 		677739DE1ABD8B8300E7BC8E /* track.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = track.json; path = Fixture/track.json; sourceTree = "<group>"; };
+		677739E11ABD9F7400E7BC8E /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = App.swift; path = Source/App.swift; sourceTree = SOURCE_ROOT; };
 		67F59BEA1AB9C5960018DA25 /* SoundCloudKitiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKitiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F59BF51AB9C5970018DA25 /* SoundCloudKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundCloudKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F59C231AB9C8490018DA25 /* SoundCloudKitMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKitMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +201,7 @@
 			children = (
 				677739DB1ABD8B4D00E7BC8E /* Track.swift */,
 				677739D01ABD898B00E7BC8E /* User.swift */,
+				677739E11ABD9F7400E7BC8E /* App.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -381,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677739E21ABD9F7400E7BC8E /* App.swift in Sources */,
 				677739D11ABD898B00E7BC8E /* User.swift in Sources */,
 				677739DC1ABD8B4D00E7BC8E /* Track.swift in Sources */,
 			);
@@ -398,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677739E31ABD9F7400E7BC8E /* App.swift in Sources */,
 				677739D21ABD898B00E7BC8E /* User.swift in Sources */,
 				677739DD1ABD8B4D00E7BC8E /* Track.swift in Sources */,
 			);

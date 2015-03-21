@@ -50,7 +50,7 @@ class Track {
     let favoritingsCount:    Int
     let originalFormat:      String
     let originalContentSize: Int64
-//    let createdWith:         App
+    let createdWith:         App
     
     init(json: JSON) {
         id                  = json["id"].intValue
@@ -94,7 +94,7 @@ class Track {
         favoritingsCount    = json["favoritings_count"].intValue
         originalFormat      = json["original_format"].stringValue
         originalContentSize = json["original_content_size"].int64Value
-//        createdWith         = App(json: json["created_with"])
+        createdWith         = App(json: json["created_with"])
     }
 }
 
