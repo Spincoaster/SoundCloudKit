@@ -8,6 +8,50 @@
 
 import SwiftyJSON
 
+enum Sharing: String {
+    case Public  = "public"
+    case Private = "private"
+}
+
+enum EmbeddableBy: String {
+    case All  = "all"
+    case Me   = "me"
+    case None = "none"
+}
+
+enum EncodingState: String {
+    case Processing = "processing"
+    case Failed     = "failed"
+    case Finished   = "finished"
+}
+
+enum License: String {
+    case NoRightsReserved  = "no-rights-reserved"
+    case AllRightsReserved = "all-rights-reserved"
+    case CcBy              = "cc-by"
+    case CcByNc            = "cc-by-nc"
+    case CcByNd            = "cc-by-nd"
+    case CcBySa            = "cc-by-sa"
+    case CcByNcNd          = "cc-by-nc-nd"
+    case CcByNcSa          = "cc-by-nc-sa"
+}
+
+enum TrackType: String {
+    case Original    = "original"
+    case Remix       = "remix"
+    case Live        = "live"
+    case Recording   = "recording"
+    case Spoken      = "spoken"
+    case Podcast     = "podcast"
+    case Demo        = "demo"
+    case InProgress  = "in progress"
+    case Stem        = "stem"
+    case Loop        = "loop"
+    case SoundEffect = "sound effect"
+    case Sample      = "sample"
+    case Other       = "other"
+}
+
 class Track {
     let id:                  Int
     let createdAt:           String
@@ -17,8 +61,8 @@ class Track {
     let permalink:           String
     let permalinkUrl:        String
     let uri:                 String
-    let sharing:             String
-    let embeddableBy:        String
+    let sharing:             Sharing
+    let embeddableBy:        EmbeddableBy
     let purchaseUrl:         String?
     let artworkUrl:          String?
     let description:         String?
@@ -34,8 +78,9 @@ class Track {
     let releaseYear:         Int?
     let streamable:          Bool
     let downloadable:        Bool
-    let state:               String
-    let license:             String
+    let state:               EncodingState
+    let license:             License
+    let trackType:           TrackType
     let waveformUrl:         String
     let downloadUrl:         String
     let streamUrl:           String
@@ -61,8 +106,8 @@ class Track {
         permalink           = json["permalink"].stringValue
         permalinkUrl        = json["permalink_url"].stringValue
         uri                 = json["uri"].stringValue
-        sharing             = json["sharing"].stringValue
-        embeddableBy        = json["embeddable_by"].stringValue
+        sharing             = Sharing(rawValue: json["sharing"].stringValue)!
+        embeddableBy        = EmbeddableBy(rawValue: json["embeddable_by"].stringValue)!
         purchaseUrl         = json["purchase_url"].stringValue
         artworkUrl          = json["artwork_url"].stringValue
         description         = json["description"].stringValue
@@ -78,8 +123,9 @@ class Track {
         releaseYear         = json["release_year"].intValue
         streamable          = json["streamable"].boolValue
         downloadable        = json["downloadable"].boolValue
-        state               = json["state"].stringValue
-        license             = json["license"].stringValue
+        state               = EncodingState(rawValue: json["state"].stringValue)!
+        license             = License(rawValue: json["license"].stringValue)!
+        trackType           = TrackType(rawValue: json["track_type"].stringValue)!
         waveformUrl         = json["waveform_url"].stringValue
         downloadUrl         = json["download_url"].stringValue
         streamUrl           = json["stream_url"].stringValue
