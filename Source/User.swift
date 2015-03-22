@@ -8,29 +8,29 @@
 
 import SwiftyJSON
 
-class User {
-    let id: Int
-    let permalink:            String
-    let username:             String
-    let uri:                  String
-    let permalinkUrl:         String
-    let avatarUrl:            String
-    let country:              String?
-    let fullName:             String?
-    let city:                 String?
-    let description:          String?
-    let discogsName:          String?
-    let myspaceName:          String?
-    let website:              String?
-    let websiteTitle:         String?
-    let online:               Bool?
-    let trackCount:           Int?
-    let playlistCount:        Int?
-    let followersCount:       Int?
-    let followingsCount:      Int?
-    let publicFavoritesCount: Int?
+public class User {
+    public let id: Int
+    public let permalink:            String
+    public let username:             String
+    public let uri:                  String
+    public let permalinkUrl:         String
+    public let avatarUrl:            String
+    public let country:              String?
+    public let fullName:             String?
+    public let city:                 String?
+    public let description:          String?
+    public let discogsName:          String?
+    public let myspaceName:          String?
+    public let website:              String?
+    public let websiteTitle:         String?
+    public let online:               Bool?
+    public let trackCount:           Int?
+    public let playlistCount:        Int?
+    public let followersCount:       Int?
+    public let followingsCount:      Int?
+    public let publicFavoritesCount: Int?
 
-    init(json: JSON) {
+    public init(json: JSON) {
         id                   = json["id"].intValue
         permalink            = json["permalink"].stringValue
         username             = json["username"].stringValue

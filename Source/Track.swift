@@ -8,24 +8,24 @@
 
 import SwiftyJSON
 
-enum Sharing: String {
+public enum Sharing: String {
     case Public  = "public"
     case Private = "private"
 }
 
-enum EmbeddableBy: String {
+public enum EmbeddableBy: String {
     case All  = "all"
     case Me   = "me"
     case None = "none"
 }
 
-enum EncodingState: String {
+public enum EncodingState: String {
     case Processing = "processing"
     case Failed     = "failed"
     case Finished   = "finished"
 }
 
-enum License: String {
+public enum License: String {
     case NoRightsReserved  = "no-rights-reserved"
     case AllRightsReserved = "all-rights-reserved"
     case CcBy              = "cc-by"
@@ -36,7 +36,7 @@ enum License: String {
     case CcByNcSa          = "cc-by-nc-sa"
 }
 
-enum TrackType: String {
+public enum TrackType: String {
     case Original    = "original"
     case Remix       = "remix"
     case Live        = "live"
@@ -52,52 +52,52 @@ enum TrackType: String {
     case Other       = "other"
 }
 
-class Track {
-    let id:                  Int
-    let createdAt:           String
-    let userId:              Int
-    let user:                User
-    let title:               String
-    let permalink:           String
-    let permalinkUrl:        String
-    let uri:                 String
-    let sharing:             Sharing
-    let embeddableBy:        EmbeddableBy
-    let purchaseUrl:         String?
-    let artworkUrl:          String?
-    let description:         String?
-    let label:               User
-    let duration:            Int64
-    let genre:               String?
-    let tagList:             String
-    let labelId:             Int64?
-    let labelName:           String?
-    let release:             Int?
-    let releaseDay:          Int?
-    let releaseMonth:        Int?
-    let releaseYear:         Int?
-    let streamable:          Bool
-    let downloadable:        Bool
-    let state:               EncodingState
-    let license:             License
-    let trackType:           TrackType
-    let waveformUrl:         String
-    let downloadUrl:         String
-    let streamUrl:           String
-    let videoUrl:            String?
-    let bpm:                 Int?
-    let commentable:         Bool
-    let isrc:                String?
-    let keySignature:        String?
-    let commentCount:        Int
-    let downloadCount:       Int
-    let playbackCount:       Int
-    let favoritingsCount:    Int
-    let originalFormat:      String
-    let originalContentSize: Int64
-    let createdWith:         App
+public class Track {
+    public let id:                  Int
+    public let createdAt:           String
+    public let userId:              Int
+    public let user:                User
+    public let title:               String
+    public let permalink:           String
+    public let permalinkUrl:        String
+    public let uri:                 String
+    public let sharing:             Sharing
+    public let embeddableBy:        EmbeddableBy
+    public let purchaseUrl:         String?
+    public let artworkUrl:          String?
+    public let description:         String?
+    public let label:               User
+    public let duration:            Int64
+    public let genre:               String?
+    public let tagList:             String
+    public let labelId:             Int64?
+    public let labelName:           String?
+    public let release:             Int?
+    public let releaseDay:          Int?
+    public let releaseMonth:        Int?
+    public let releaseYear:         Int?
+    public let streamable:          Bool
+    public let downloadable:        Bool
+    public let state:               EncodingState
+    public let license:             License
+    public let trackType:           TrackType
+    public let waveformUrl:         String
+    public let downloadUrl:         String
+    public let streamUrl:           String
+    public let videoUrl:            String?
+    public let bpm:                 Int?
+    public let commentable:         Bool
+    public let isrc:                String?
+    public let keySignature:        String?
+    public let commentCount:        Int
+    public let downloadCount:       Int
+    public let playbackCount:       Int
+    public let favoritingsCount:    Int
+    public let originalFormat:      String
+    public let originalContentSize: Int64
+    public let createdWith:         App
     
-    init(json: JSON) {
+    public init(json: JSON) {
         id                  = json["id"].intValue
         createdAt           = json["created_at"].stringValue
         userId              = json["user_id"].intValue
@@ -143,4 +143,3 @@ class Track {
         createdWith         = App(json: json["created_with"])
     }
 }
-
