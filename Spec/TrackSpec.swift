@@ -16,7 +16,7 @@ class TrackSpec: QuickSpec {
         describe("a track") {
             it ("should be constructed with json") {
                 let json = JSON(SpecHelper.fixtureJSONObject(fixtureNamed: "track")!)
-                
+
                 var track = Track(json: json)
                 expect(track.id).to(equal(13158665))
                 expect(track.createdAt).to(equal("2011/04/06 15:37:43 +0000"))
@@ -51,20 +51,29 @@ class TrackSpec: QuickSpec {
                 expect(track.permalinkUrl).to(equal("http://soundcloud.com/user2835985/munching-at-tiannas-house"))
                 expect(track.artworkUrl).to(beNil())
                 expect(track.waveformUrl).to(equal("http://w1.sndcdn.com/fxguEjG4ax6B_m.png"))
-// user
+
+                expect(track.user).notTo(beNil())
+                expect(track.user.id).to(equal(3699101))
+                expect(track.user.permalink).to(equal("user2835985"))
+                expect(track.user.username).to(equal("user2835985"))
+                expect(track.user.uri).to(equal("http://api.soundcloud.com/users/3699101"))
+                expect(track.user.permalinkUrl).to(equal("http://soundcloud.com/user2835985"))
+                expect(track.user.avatarUrl).to(equal("http://a1.sndcdn.com/images/default_avatar_large.png?142a848"))
+
                 expect(track.streamUrl).to(equal("http://api.soundcloud.com/tracks/13158665/stream"))
                 expect(track.downloadUrl).to(equal("http://api.soundcloud.com/tracks/13158665/download"))
                 expect(track.playbackCount).to(equal(0))
                 expect(track.downloadCount).to(equal(0))
                 expect(track.favoritingsCount).to(equal(0))
                 expect(track.commentCount).to(equal(0))
-// created_with
+
                 expect(track.createdWith).notTo(beNil())
                 expect(track.createdWith.id).to(equal(124))
                 expect(track.createdWith.name).to(equal("SoundCloud iPhone"))
                 expect(track.createdWith.uri).to(equal("http://api.soundcloud.com/apps/124"))
                 expect(track.createdWith.permalinkUrl).to(equal("http://soundcloud.com/apps/iphone"))
-//                expect(track.).to(equal("http://api.soundcloud.com/tracks/13158665/attachments"))
+
+                expect(track.attachmentsUri).to(equal("http://api.soundcloud.com/tracks/13158665/attachments"))
             }
         }
     }
