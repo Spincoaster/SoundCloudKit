@@ -13,7 +13,7 @@ import SoundCloudKit
 
 class UserSpec: QuickSpec {
     override func spec() {
-        describe("a entry") {
+        describe("a user") {
             it ("should be constructed with json") {
                 let json = JSON(SpecHelper.fixtureJSONObject(fixtureNamed: "user")!)
 
