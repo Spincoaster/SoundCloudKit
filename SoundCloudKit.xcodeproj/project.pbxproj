@@ -7,30 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6777399C1ABC487400E7BC8E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6777399B1ABC487400E7BC8E /* Info.plist */; };
-		6777399F1ABC487C00E7BC8E /* SoundCloudKit-Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 6777399D1ABC487C00E7BC8E /* SoundCloudKit-Mac.h */; };
-		677739A01ABC487C00E7BC8E /* SoundCloudKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6777399E1ABC487C00E7BC8E /* SoundCloudKit.h */; };
-		677739A21ABC488600E7BC8E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 677739A11ABC488600E7BC8E /* Info.plist */; };
 		677739AE1ABC541200E7BC8E /* SoundCloudKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739A41ABC488F00E7BC8E /* SoundCloudKitTests.swift */; };
 		677739C31ABD7AEF00E7BC8E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C11ABD7AEF00E7BC8E /* Alamofire.framework */; };
 		677739C41ABD7AEF00E7BC8E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C21ABD7AEF00E7BC8E /* SwiftyJSON.framework */; };
 		677739C81ABD7B3000E7BC8E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C61ABD7B3000E7BC8E /* Alamofire.framework */; };
 		677739C91ABD7B3000E7BC8E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C71ABD7B3000E7BC8E /* SwiftyJSON.framework */; };
-		677739D11ABD898B00E7BC8E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739D01ABD898B00E7BC8E /* User.swift */; };
 		677739D21ABD898B00E7BC8E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739D01ABD898B00E7BC8E /* User.swift */; };
-		677739D91ABD8AA200E7BC8E /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 677739D81ABD8AA200E7BC8E /* user.json */; };
 		677739DA1ABD8AA200E7BC8E /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 677739D81ABD8AA200E7BC8E /* user.json */; };
-		677739DC1ABD8B4D00E7BC8E /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739DB1ABD8B4D00E7BC8E /* Track.swift */; };
 		677739DD1ABD8B4D00E7BC8E /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739DB1ABD8B4D00E7BC8E /* Track.swift */; };
-		677739DF1ABD8B8300E7BC8E /* track.json in Resources */ = {isa = PBXBuildFile; fileRef = 677739DE1ABD8B8300E7BC8E /* track.json */; };
 		677739E01ABD8B8300E7BC8E /* track.json in Resources */ = {isa = PBXBuildFile; fileRef = 677739DE1ABD8B8300E7BC8E /* track.json */; };
-		677739E21ABD9F7400E7BC8E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739E11ABD9F7400E7BC8E /* App.swift */; };
 		677739E31ABD9F7400E7BC8E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739E11ABD9F7400E7BC8E /* App.swift */; };
-		67F59BF61AB9C5970018DA25 /* SoundCloudKitiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F59BEA1AB9C5960018DA25 /* SoundCloudKitiOS.framework */; };
-		67F59C2E1AB9C84A0018DA25 /* SoundCloudKitMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F59C231AB9C8490018DA25 /* SoundCloudKitMac.framework */; };
+		677739E71ABDA7F300E7BC8E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C21ABD7AEF00E7BC8E /* SwiftyJSON.framework */; };
+		677739EA1ABDA7F300E7BC8E /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739E81ABDA7F300E7BC8E /* Nimble.framework */; };
+		677739EB1ABDA7F300E7BC8E /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739E91ABDA7F300E7BC8E /* Quick.framework */; };
+		677739ED1ABDAA5D00E7BC8E /* SpecHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739EC1ABDAA5D00E7BC8E /* SpecHelper.swift */; };
+		677739EE1ABDAA5D00E7BC8E /* SpecHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739EC1ABDAA5D00E7BC8E /* SpecHelper.swift */; };
+		677739F21ABDADCF00E7BC8E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C71ABD7B3000E7BC8E /* SwiftyJSON.framework */; };
+		677739F51ABDADD000E7BC8E /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739F31ABDADD000E7BC8E /* Nimble.framework */; };
+		677739F61ABDADD000E7BC8E /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739F41ABDADD000E7BC8E /* Quick.framework */; };
+		677739FB1ABDAF2100E7BC8E /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 677739C71ABD7B3000E7BC8E /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		677739FC1ABDAF2100E7BC8E /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 677739C61ABD7B3000E7BC8E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		677739FD1ABDAF2100E7BC8E /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 677739F41ABDADD000E7BC8E /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		677739FE1ABDAF2100E7BC8E /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 677739F31ABDADD000E7BC8E /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		677739FF1ABDAFB200E7BC8E /* SoundCloudKit_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739A31ABC488F00E7BC8E /* SoundCloudKit_MacTests.swift */; };
+		67773A001ABDB00100E7BC8E /* track.json in Resources */ = {isa = PBXBuildFile; fileRef = 677739DE1ABD8B8300E7BC8E /* track.json */; };
+		67773A011ABDB00100E7BC8E /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 677739D81ABD8AA200E7BC8E /* user.json */; };
+		67773A021ABDB06700E7BC8E /* SoundCloudKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67F59C231AB9C8490018DA25 /* SoundCloudKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67773A051ABDB5A800E7BC8E /* track.json in Resources */ = {isa = PBXBuildFile; fileRef = 677739DE1ABD8B8300E7BC8E /* track.json */; };
+		67773A061ABDB5A800E7BC8E /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 677739D81ABD8AA200E7BC8E /* user.json */; };
+		67773A081ABDB5BF00E7BC8E /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 677739C21ABD7AEF00E7BC8E /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67773A091ABDB5BF00E7BC8E /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 677739C11ABD7AEF00E7BC8E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67773A0A1ABDB5BF00E7BC8E /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 677739E91ABDA7F300E7BC8E /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67773A0B1ABDB5BF00E7BC8E /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 677739E81ABDA7F300E7BC8E /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67773A0C1ABDB73000E7BC8E /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739DB1ABD8B4D00E7BC8E /* Track.swift */; };
+		67773A0D1ABDB73000E7BC8E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739D01ABD898B00E7BC8E /* User.swift */; };
+		67773A0E1ABDB73000E7BC8E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739E11ABD9F7400E7BC8E /* App.swift */; };
+		67773A101ABE5F7100E7BC8E /* UserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A0F1ABE5F7100E7BC8E /* UserSpec.swift */; };
+		67773A111ABE5F7100E7BC8E /* UserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A0F1ABE5F7100E7BC8E /* UserSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		67773A031ABDB09D00E7BC8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67F59BE11AB9C5960018DA25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67F59C221AB9C8490018DA25;
+			remoteInfo = SoundCloudKitMac;
+		};
 		67F59BF71AB9C5970018DA25 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 67F59BE11AB9C5960018DA25 /* Project object */;
@@ -38,14 +61,37 @@
 			remoteGlobalIDString = 67F59BE91AB9C5960018DA25;
 			remoteInfo = SoundCloudKit;
 		};
-		67F59C2F1AB9C84A0018DA25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 67F59BE11AB9C5960018DA25 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 67F59C221AB9C8490018DA25;
-			remoteInfo = "SoundCloudKit-Mac";
-		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		677739F81ABDAE7100E7BC8E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				67773A021ABDB06700E7BC8E /* SoundCloudKit.framework in CopyFiles */,
+				677739FB1ABDAF2100E7BC8E /* SwiftyJSON.framework in CopyFiles */,
+				677739FC1ABDAF2100E7BC8E /* Alamofire.framework in CopyFiles */,
+				677739FD1ABDAF2100E7BC8E /* Quick.framework in CopyFiles */,
+				677739FE1ABDAF2100E7BC8E /* Nimble.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67773A071ABDB5B300E7BC8E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				67773A081ABDB5BF00E7BC8E /* SwiftyJSON.framework in CopyFiles */,
+				67773A091ABDB5BF00E7BC8E /* Alamofire.framework in CopyFiles */,
+				67773A0A1ABDB5BF00E7BC8E /* Quick.framework in CopyFiles */,
+				67773A0B1ABDB5BF00E7BC8E /* Nimble.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6777399B1ABC487400E7BC8E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -63,9 +109,15 @@
 		677739DB1ABD8B4D00E7BC8E /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Track.swift; path = Source/Track.swift; sourceTree = SOURCE_ROOT; };
 		677739DE1ABD8B8300E7BC8E /* track.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = track.json; path = Fixture/track.json; sourceTree = "<group>"; };
 		677739E11ABD9F7400E7BC8E /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = App.swift; path = Source/App.swift; sourceTree = SOURCE_ROOT; };
-		67F59BEA1AB9C5960018DA25 /* SoundCloudKitiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKitiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		677739E81ABDA7F300E7BC8E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		677739E91ABDA7F300E7BC8E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		677739EC1ABDAA5D00E7BC8E /* SpecHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpecHelper.swift; path = Spec/SpecHelper.swift; sourceTree = SOURCE_ROOT; };
+		677739F31ABDADD000E7BC8E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
+		677739F41ABDADD000E7BC8E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		67773A0F1ABE5F7100E7BC8E /* UserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSpec.swift; path = Spec/UserSpec.swift; sourceTree = SOURCE_ROOT; };
+		67F59BEA1AB9C5960018DA25 /* SoundCloudKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F59BF51AB9C5970018DA25 /* SoundCloudKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundCloudKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		67F59C231AB9C8490018DA25 /* SoundCloudKitMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKitMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67F59C231AB9C8490018DA25 /* SoundCloudKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F59C2D1AB9C84A0018DA25 /* SoundCloudKit-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SoundCloudKit-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,7 +135,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67F59BF61AB9C5970018DA25 /* SoundCloudKitiOS.framework in Frameworks */,
+				677739EA1ABDA7F300E7BC8E /* Nimble.framework in Frameworks */,
+				677739EB1ABDA7F300E7BC8E /* Quick.framework in Frameworks */,
+				677739E71ABDA7F300E7BC8E /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +154,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67F59C2E1AB9C84A0018DA25 /* SoundCloudKitMac.framework in Frameworks */,
+				677739F51ABDADD000E7BC8E /* Nimble.framework in Frameworks */,
+				677739F61ABDADD000E7BC8E /* Quick.framework in Frameworks */,
+				677739F21ABDADCF00E7BC8E /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,10 +166,8 @@
 		677739C51ABD7AFC00E7BC8E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				677739C61ABD7B3000E7BC8E /* Alamofire.framework */,
-				677739C71ABD7B3000E7BC8E /* SwiftyJSON.framework */,
-				677739C11ABD7AEF00E7BC8E /* Alamofire.framework */,
-				677739C21ABD7AEF00E7BC8E /* SwiftyJSON.framework */,
+				677739FA1ABDAEC900E7BC8E /* iOS */,
+				677739F91ABDAEC300E7BC8E /* Mac */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,6 +179,28 @@
 				677739D81ABD8AA200E7BC8E /* user.json */,
 			);
 			name = Fixture;
+			sourceTree = "<group>";
+		};
+		677739F91ABDAEC300E7BC8E /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				677739C71ABD7B3000E7BC8E /* SwiftyJSON.framework */,
+				677739C61ABD7B3000E7BC8E /* Alamofire.framework */,
+				677739F41ABDADD000E7BC8E /* Quick.framework */,
+				677739F31ABDADD000E7BC8E /* Nimble.framework */,
+			);
+			name = Mac;
+			sourceTree = "<group>";
+		};
+		677739FA1ABDAEC900E7BC8E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				677739C21ABD7AEF00E7BC8E /* SwiftyJSON.framework */,
+				677739C11ABD7AEF00E7BC8E /* Alamofire.framework */,
+				677739E91ABDA7F300E7BC8E /* Quick.framework */,
+				677739E81ABDA7F300E7BC8E /* Nimble.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		67F59BE01AB9C5960018DA25 = {
@@ -141,9 +217,9 @@
 		67F59BEB1AB9C5960018DA25 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				67F59BEA1AB9C5960018DA25 /* SoundCloudKitiOS.framework */,
+				67F59BEA1AB9C5960018DA25 /* SoundCloudKit.framework */,
 				67F59BF51AB9C5970018DA25 /* SoundCloudKitTests.xctest */,
-				67F59C231AB9C8490018DA25 /* SoundCloudKitMac.framework */,
+				67F59C231AB9C8490018DA25 /* SoundCloudKit.framework */,
 				67F59C2D1AB9C84A0018DA25 /* SoundCloudKit-MacTests.xctest */,
 			);
 			name = Products;
@@ -176,6 +252,8 @@
 				677739A31ABC488F00E7BC8E /* SoundCloudKit_MacTests.swift */,
 				677739A41ABC488F00E7BC8E /* SoundCloudKitTests.swift */,
 				67F59BFA1AB9C5970018DA25 /* Supporting Files */,
+				67773A0F1ABE5F7100E7BC8E /* UserSpec.swift */,
+				677739EC1ABDAA5D00E7BC8E /* SpecHelper.swift */,
 			);
 			name = Spec;
 			path = SoundCloudKitTests;
@@ -213,8 +291,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6777399F1ABC487C00E7BC8E /* SoundCloudKit-Mac.h in Headers */,
-				677739A01ABC487C00E7BC8E /* SoundCloudKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +319,7 @@
 			);
 			name = SoundCloudKitiOS;
 			productName = SoundCloudKit;
-			productReference = 67F59BEA1AB9C5960018DA25 /* SoundCloudKitiOS.framework */;
+			productReference = 67F59BEA1AB9C5960018DA25 /* SoundCloudKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		67F59BF41AB9C5970018DA25 /* SoundCloudKitTests */ = {
@@ -253,6 +329,7 @@
 				67F59BF11AB9C5970018DA25 /* Sources */,
 				67F59BF21AB9C5970018DA25 /* Frameworks */,
 				67F59BF31AB9C5970018DA25 /* Resources */,
+				67773A071ABDB5B300E7BC8E /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -279,7 +356,7 @@
 			);
 			name = SoundCloudKitMac;
 			productName = "SoundCloudKit-Mac";
-			productReference = 67F59C231AB9C8490018DA25 /* SoundCloudKitMac.framework */;
+			productReference = 67F59C231AB9C8490018DA25 /* SoundCloudKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		67F59C2C1AB9C84A0018DA25 /* SoundCloudKit-MacTests */ = {
@@ -289,11 +366,12 @@
 				67F59C291AB9C84A0018DA25 /* Sources */,
 				67F59C2A1AB9C84A0018DA25 /* Frameworks */,
 				67F59C2B1AB9C84A0018DA25 /* Resources */,
+				677739F81ABDAE7100E7BC8E /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				67F59C301AB9C84A0018DA25 /* PBXTargetDependency */,
+				67773A041ABDB09D00E7BC8E /* PBXTargetDependency */,
 			);
 			name = "SoundCloudKit-MacTests";
 			productName = "SoundCloudKit-MacTests";
@@ -348,10 +426,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				677739D91ABD8AA200E7BC8E /* user.json in Resources */,
-				677739A21ABC488600E7BC8E /* Info.plist in Resources */,
-				6777399C1ABC487400E7BC8E /* Info.plist in Resources */,
-				677739DF1ABD8B8300E7BC8E /* track.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +433,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67773A051ABDB5A800E7BC8E /* track.json in Resources */,
+				67773A061ABDB5A800E7BC8E /* user.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +451,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67773A001ABDB00100E7BC8E /* track.json in Resources */,
+				67773A011ABDB00100E7BC8E /* user.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,9 +463,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				677739E21ABD9F7400E7BC8E /* App.swift in Sources */,
-				677739D11ABD898B00E7BC8E /* User.swift in Sources */,
-				677739DC1ABD8B4D00E7BC8E /* Track.swift in Sources */,
+				67773A0C1ABDB73000E7BC8E /* Track.swift in Sources */,
+				67773A0D1ABDB73000E7BC8E /* User.swift in Sources */,
+				67773A0E1ABDB73000E7BC8E /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +474,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				677739AE1ABC541200E7BC8E /* SoundCloudKitTests.swift in Sources */,
+				677739ED1ABDAA5D00E7BC8E /* SpecHelper.swift in Sources */,
+				67773A101ABE5F7100E7BC8E /* UserSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,21 +493,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677739FF1ABDAFB200E7BC8E /* SoundCloudKit_MacTests.swift in Sources */,
+				677739EE1ABDAA5D00E7BC8E /* SpecHelper.swift in Sources */,
+				67773A111ABE5F7100E7BC8E /* UserSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		67773A041ABDB09D00E7BC8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67F59C221AB9C8490018DA25 /* SoundCloudKitMac */;
+			targetProxy = 67773A031ABDB09D00E7BC8E /* PBXContainerItemProxy */;
+		};
 		67F59BF81AB9C5970018DA25 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 67F59BE91AB9C5960018DA25 /* SoundCloudKitiOS */;
 			targetProxy = 67F59BF71AB9C5970018DA25 /* PBXContainerItemProxy */;
-		};
-		67F59C301AB9C84A0018DA25 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 67F59C221AB9C8490018DA25 /* SoundCloudKitMac */;
-			targetProxy = 67F59C2F1AB9C84A0018DA25 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -532,7 +615,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -553,7 +636,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -564,6 +647,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -581,6 +665,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Spec/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -610,7 +695,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -636,7 +721,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
@@ -645,10 +730,12 @@
 		67F59C3A1AB9C84A0018DA25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -659,17 +746,20 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		67F59C3B1AB9C84A0018DA25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = Spec/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
