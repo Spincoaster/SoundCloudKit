@@ -44,7 +44,7 @@ public class User {
         discogsName          = json["discogs-name"].string
         myspaceName          = json["myspace-name"].string
         website              = json["website"].string
-        websiteTitle         = json["website-title"].string
+        websiteTitle         = json["website_title"].string
         online               = json["online"].bool
         trackCount           = json["track_count"].int
         playlistCount        = json["playlist_count"].int
