@@ -46,6 +46,12 @@
 		67773A111ABE5F7100E7BC8E /* UserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A0F1ABE5F7100E7BC8E /* UserSpec.swift */; };
 		67773A131ABE602300E7BC8E /* TrackSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A121ABE602300E7BC8E /* TrackSpec.swift */; };
 		67773A141ABE602300E7BC8E /* TrackSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A121ABE602300E7BC8E /* TrackSpec.swift */; };
+		67773A161ABE7CC000E7BC8E /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A151ABE7CC000E7BC8E /* Playlist.swift */; };
+		67773A171ABE7CC000E7BC8E /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A151ABE7CC000E7BC8E /* Playlist.swift */; };
+		67773A1F1ABEA8CB00E7BC8E /* playlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 67773A1E1ABEA8CB00E7BC8E /* playlist.json */; };
+		67773A201ABEA8CB00E7BC8E /* playlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 67773A1E1ABEA8CB00E7BC8E /* playlist.json */; };
+		67773A221ABEA98A00E7BC8E /* PlaylistSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A211ABEA98A00E7BC8E /* PlaylistSpec.swift */; };
+		67773A231ABEA98A00E7BC8E /* PlaylistSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A211ABEA98A00E7BC8E /* PlaylistSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +124,9 @@
 		677739F41ABDADD000E7BC8E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		67773A0F1ABE5F7100E7BC8E /* UserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSpec.swift; path = Spec/UserSpec.swift; sourceTree = SOURCE_ROOT; };
 		67773A121ABE602300E7BC8E /* TrackSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackSpec.swift; path = Spec/TrackSpec.swift; sourceTree = SOURCE_ROOT; };
+		67773A151ABE7CC000E7BC8E /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Playlist.swift; path = Source/Playlist.swift; sourceTree = SOURCE_ROOT; };
+		67773A1E1ABEA8CB00E7BC8E /* playlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = playlist.json; path = Fixture/playlist.json; sourceTree = "<group>"; };
+		67773A211ABEA98A00E7BC8E /* PlaylistSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaylistSpec.swift; path = Spec/PlaylistSpec.swift; sourceTree = SOURCE_ROOT; };
 		67F59BEA1AB9C5960018DA25 /* SoundCloudKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F59BF51AB9C5970018DA25 /* SoundCloudKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundCloudKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F59C231AB9C8490018DA25 /* SoundCloudKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +187,7 @@
 		677739D31ABD8A3100E7BC8E /* Fixture */ = {
 			isa = PBXGroup;
 			children = (
+				67773A1E1ABEA8CB00E7BC8E /* playlist.json */,
 				677739DE1ABD8B8300E7BC8E /* track.json */,
 				677739D81ABD8AA200E7BC8E /* user.json */,
 			);
@@ -258,6 +268,7 @@
 				67773A0F1ABE5F7100E7BC8E /* UserSpec.swift */,
 				67773A121ABE602300E7BC8E /* TrackSpec.swift */,
 				677739EC1ABDAA5D00E7BC8E /* SpecHelper.swift */,
+				67773A211ABEA98A00E7BC8E /* PlaylistSpec.swift */,
 			);
 			name = Spec;
 			path = SoundCloudKitTests;
@@ -284,6 +295,7 @@
 				677739DB1ABD8B4D00E7BC8E /* Track.swift */,
 				677739D01ABD898B00E7BC8E /* User.swift */,
 				677739E11ABD9F7400E7BC8E /* App.swift */,
+				67773A151ABE7CC000E7BC8E /* Playlist.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -439,6 +451,7 @@
 			files = (
 				67773A051ABDB5A800E7BC8E /* track.json in Resources */,
 				67773A061ABDB5A800E7BC8E /* user.json in Resources */,
+				67773A1F1ABEA8CB00E7BC8E /* playlist.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +470,7 @@
 			files = (
 				67773A001ABDB00100E7BC8E /* track.json in Resources */,
 				67773A011ABDB00100E7BC8E /* user.json in Resources */,
+				67773A201ABEA8CB00E7BC8E /* playlist.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +484,7 @@
 				67773A0C1ABDB73000E7BC8E /* Track.swift in Sources */,
 				67773A0D1ABDB73000E7BC8E /* User.swift in Sources */,
 				67773A0E1ABDB73000E7BC8E /* App.swift in Sources */,
+				67773A161ABE7CC000E7BC8E /* Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +494,7 @@
 			files = (
 				677739AE1ABC541200E7BC8E /* SoundCloudKitTests.swift in Sources */,
 				677739ED1ABDAA5D00E7BC8E /* SpecHelper.swift in Sources */,
+				67773A221ABEA98A00E7BC8E /* PlaylistSpec.swift in Sources */,
 				67773A131ABE602300E7BC8E /* TrackSpec.swift in Sources */,
 				67773A101ABE5F7100E7BC8E /* UserSpec.swift in Sources */,
 			);
@@ -491,6 +507,7 @@
 				677739E31ABD9F7400E7BC8E /* App.swift in Sources */,
 				677739D21ABD898B00E7BC8E /* User.swift in Sources */,
 				677739DD1ABD8B4D00E7BC8E /* Track.swift in Sources */,
+				67773A171ABE7CC000E7BC8E /* Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +517,7 @@
 			files = (
 				677739FF1ABDAFB200E7BC8E /* SoundCloudKit_MacTests.swift in Sources */,
 				677739EE1ABDAA5D00E7BC8E /* SpecHelper.swift in Sources */,
+				67773A231ABEA98A00E7BC8E /* PlaylistSpec.swift in Sources */,
 				67773A141ABE602300E7BC8E /* TrackSpec.swift in Sources */,
 				67773A111ABE5F7100E7BC8E /* UserSpec.swift in Sources */,
 			);

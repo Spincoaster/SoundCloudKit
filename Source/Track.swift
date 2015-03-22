@@ -80,7 +80,7 @@ public class Track {
     public let downloadable:        Bool
     public let state:               EncodingState
     public let license:             License
-    public let trackType:           TrackType
+    public let trackType:           TrackType?
     public let waveformUrl:         String
     public let downloadUrl:         String
     public let streamUrl:           String
@@ -127,7 +127,7 @@ public class Track {
         downloadable        = json["downloadable"].boolValue
         state               = EncodingState(rawValue: json["state"].stringValue)!
         license             = License(rawValue: json["license"].stringValue)!
-        trackType           = TrackType(rawValue: json["track_type"].stringValue)!
+        trackType           = TrackType(rawValue: json["track_type"].stringValue)
         waveformUrl         = json["waveform_url"].stringValue
         downloadUrl         = json["download_url"].stringValue
         streamUrl           = json["stream_url"].stringValue
