@@ -13,12 +13,12 @@ public class App {
     public let uri: String
     public let permalinkUrl: String
     public let externalUrl: String
-    public let creator: String
+    public let name: String
     public init(json: JSON) {
         id           = json["id"].intValue
         uri          = json["uri"].stringValue
         permalinkUrl = json["permalink_url"].stringValue
         externalUrl  = json["external_url"].stringValue
-        creator      = json["creator"].stringValue
+        name         = json["name"].stringValue
     }
 }

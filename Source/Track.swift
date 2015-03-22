@@ -62,7 +62,7 @@ public class Track {
     public let permalinkUrl:        String
     public let uri:                 String
     public let sharing:             Sharing
-    public let embeddableBy:        EmbeddableBy
+    public let embeddableBy:        EmbeddableBy?
     public let purchaseUrl:         String?
     public let artworkUrl:          String?
     public let description:         String?
@@ -96,6 +96,8 @@ public class Track {
     public let originalFormat:      String
     public let originalContentSize: Int64
     public let createdWith:         App
+
+    public let attachmentsUri:      String?
     
     public init(json: JSON) {
         id                  = json["id"].intValue
@@ -107,20 +109,20 @@ public class Track {
         permalinkUrl        = json["permalink_url"].stringValue
         uri                 = json["uri"].stringValue
         sharing             = Sharing(rawValue: json["sharing"].stringValue)!
-        embeddableBy        = EmbeddableBy(rawValue: json["embeddable_by"].stringValue)!
-        purchaseUrl         = json["purchase_url"].stringValue
-        artworkUrl          = json["artwork_url"].stringValue
-        description         = json["description"].stringValue
+        embeddableBy        = EmbeddableBy(rawValue: json["embeddable_by"].stringValue)
+        purchaseUrl         = json["purchase_url"].string
+        artworkUrl          = json["artwork_url"].string
+        description         = json["description"].string
         label               = User(json: json["label"])
-        duration            = json["description"].int64Value
-        genre               = json["genre"].stringValue
+        duration            = json["duration"].int64Value
+        genre               = json["genre"].string
         tagList             = json["tag_list"].stringValue
-        labelId             = json["label_id"].int64Value
-        labelName           = json["label_name"].stringValue
-        release             = json["release"].intValue
-        releaseDay          = json["release_day"].intValue
-        releaseMonth        = json["release_month"].intValue
-        releaseYear         = json["release_year"].intValue
+        labelId             = json["label_id"].int64
+        labelName           = json["label_name"].string
+        release             = json["release"].int
+        releaseDay          = json["release_day"].int
+        releaseMonth        = json["release_month"].int
+        releaseYear         = json["release_year"].int
         streamable          = json["streamable"].boolValue
         downloadable        = json["downloadable"].boolValue
         state               = EncodingState(rawValue: json["state"].stringValue)!
@@ -129,11 +131,11 @@ public class Track {
         waveformUrl         = json["waveform_url"].stringValue
         downloadUrl         = json["download_url"].stringValue
         streamUrl           = json["stream_url"].stringValue
-        videoUrl            = json["video_url"].stringValue
-        bpm                 = json["bpm"].intValue
+        videoUrl            = json["video_url"].string
+        bpm                 = json["bpm"].int
         commentable         = json["commentable"].boolValue
-        isrc                = json["isrc"].stringValue
-        keySignature        = json["key_signature"].stringValue
+        isrc                = json["isrc"].string
+        keySignature        = json["key_signature"].string
         commentCount        = json["comment_count"].intValue
         downloadCount       = json["download_count"].intValue
         playbackCount       = json["playback_count"].intValue
@@ -141,5 +143,7 @@ public class Track {
         originalFormat      = json["original_format"].stringValue
         originalContentSize = json["original_content_size"].int64Value
         createdWith         = App(json: json["created_with"])
+
+        attachmentsUri      = json["attachments_uri"].string
     }
 }
