@@ -14,6 +14,6 @@ public class SpecHelper {
         let filePath = bundle.pathForResource(fixtureNamed, ofType: "json")
         let data     = NSData(contentsOfFile: filePath!)
         let jsonObject : AnyObject? = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil)
-        return jsonObject?
+        return jsonObject
     }
 }
