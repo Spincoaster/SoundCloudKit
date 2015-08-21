@@ -19,7 +19,6 @@
 		677739E01ABD8B8300E7BC8E /* track.json in Resources */ = {isa = PBXBuildFile; fileRef = 677739DE1ABD8B8300E7BC8E /* track.json */; };
 		677739E31ABD9F7400E7BC8E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739E11ABD9F7400E7BC8E /* App.swift */; };
 		677739E71ABDA7F300E7BC8E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C21ABD7AEF00E7BC8E /* SwiftyJSON.framework */; };
-		677739EA1ABDA7F300E7BC8E /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739E81ABDA7F300E7BC8E /* Nimble.framework */; };
 		677739EB1ABDA7F300E7BC8E /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739E91ABDA7F300E7BC8E /* Quick.framework */; };
 		677739ED1ABDAA5D00E7BC8E /* SpecHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739EC1ABDAA5D00E7BC8E /* SpecHelper.swift */; };
 		677739EE1ABDAA5D00E7BC8E /* SpecHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739EC1ABDAA5D00E7BC8E /* SpecHelper.swift */; };
@@ -149,7 +148,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				677739EA1ABDA7F300E7BC8E /* Nimble.framework in Frameworks */,
 				677739EB1ABDA7F300E7BC8E /* Quick.framework in Frameworks */,
 				677739E71ABDA7F300E7BC8E /* SwiftyJSON.framework in Frameworks */,
 			);
