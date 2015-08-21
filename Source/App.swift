@@ -8,7 +8,7 @@
 
 import SwiftyJSON
 
-public class App {
+public struct App {
     public let id: Int
     public let uri: String
     public let permalinkUrl: String

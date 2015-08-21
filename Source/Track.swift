@@ -52,7 +52,7 @@ public enum TrackType: String {
     case Other       = "other"
 }
 
-public class Track {
+public struct Track {
     public let id:                  Int
     public let createdAt:           String
     public let userId:              Int

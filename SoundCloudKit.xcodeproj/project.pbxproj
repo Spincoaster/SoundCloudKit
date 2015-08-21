@@ -52,6 +52,12 @@
 		67773A201ABEA8CB00E7BC8E /* playlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 67773A1E1ABEA8CB00E7BC8E /* playlist.json */; };
 		67773A221ABEA98A00E7BC8E /* PlaylistSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A211ABEA98A00E7BC8E /* PlaylistSpec.swift */; };
 		67773A231ABEA98A00E7BC8E /* PlaylistSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A211ABEA98A00E7BC8E /* PlaylistSpec.swift */; };
+		6778C8601B8745EE00ED627F /* TrackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6778C85F1B8745EE00ED627F /* TrackAPI.swift */; };
+		6778C8621B87493500ED627F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6778C8611B87493500ED627F /* Comment.swift */; };
+		67D41CF71B875D7B0082454F /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D41CF61B875D7B0082454F /* UserAPI.swift */; };
+		67D41CF81B875D7B0082454F /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D41CF61B875D7B0082454F /* UserAPI.swift */; };
+		67D41CFA1B875FD10082454F /* PlaylistAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D41CF91B875FD10082454F /* PlaylistAPI.swift */; };
+		67D41CFB1B875FD10082454F /* PlaylistAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D41CF91B875FD10082454F /* PlaylistAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +134,10 @@
 		67773A151ABE7CC000E7BC8E /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Playlist.swift; path = Source/Playlist.swift; sourceTree = SOURCE_ROOT; };
 		67773A1E1ABEA8CB00E7BC8E /* playlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = playlist.json; path = Fixture/playlist.json; sourceTree = "<group>"; };
 		67773A211ABEA98A00E7BC8E /* PlaylistSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaylistSpec.swift; path = Spec/PlaylistSpec.swift; sourceTree = SOURCE_ROOT; };
+		6778C85F1B8745EE00ED627F /* TrackAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackAPI.swift; path = Source/TrackAPI.swift; sourceTree = SOURCE_ROOT; };
+		6778C8611B87493500ED627F /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = Source/Comment.swift; sourceTree = SOURCE_ROOT; };
+		67D41CF61B875D7B0082454F /* UserAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserAPI.swift; path = Source/UserAPI.swift; sourceTree = SOURCE_ROOT; };
+		67D41CF91B875FD10082454F /* PlaylistAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaylistAPI.swift; path = Source/PlaylistAPI.swift; sourceTree = SOURCE_ROOT; };
 		67F59BEA1AB9C5960018DA25 /* SoundCloudKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F59BF51AB9C5970018DA25 /* SoundCloudKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundCloudKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F59C231AB9C8490018DA25 /* SoundCloudKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -286,6 +296,9 @@
 			isa = PBXGroup;
 			children = (
 				6736D01E1B86D32600CCDD80 /* APIClient.swift */,
+				67D41CF61B875D7B0082454F /* UserAPI.swift */,
+				6778C85F1B8745EE00ED627F /* TrackAPI.swift */,
+				67D41CF91B875FD10082454F /* PlaylistAPI.swift */,
 			);
 			name = Net;
 			sourceTree = "<group>";
@@ -297,6 +310,7 @@
 				677739D01ABD898B00E7BC8E /* User.swift */,
 				677739E11ABD9F7400E7BC8E /* App.swift */,
 				67773A151ABE7CC000E7BC8E /* Playlist.swift */,
+				6778C8611B87493500ED627F /* Comment.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -482,9 +496,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6778C8601B8745EE00ED627F /* TrackAPI.swift in Sources */,
 				67773A0C1ABDB73000E7BC8E /* Track.swift in Sources */,
 				67773A0D1ABDB73000E7BC8E /* User.swift in Sources */,
+				6778C8621B87493500ED627F /* Comment.swift in Sources */,
+				67D41CFA1B875FD10082454F /* PlaylistAPI.swift in Sources */,
 				67773A0E1ABDB73000E7BC8E /* App.swift in Sources */,
+				67D41CF71B875D7B0082454F /* UserAPI.swift in Sources */,
 				6736D01F1B86D32600CCDD80 /* APIClient.swift in Sources */,
 				67773A161ABE7CC000E7BC8E /* Playlist.swift in Sources */,
 			);
@@ -506,9 +524,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D41CF81B875D7B0082454F /* UserAPI.swift in Sources */,
 				677739E31ABD9F7400E7BC8E /* App.swift in Sources */,
 				677739D21ABD898B00E7BC8E /* User.swift in Sources */,
 				677739DD1ABD8B4D00E7BC8E /* Track.swift in Sources */,
+				67D41CFB1B875FD10082454F /* PlaylistAPI.swift in Sources */,
 				67773A171ABE7CC000E7BC8E /* Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

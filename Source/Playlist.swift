@@ -20,7 +20,7 @@ public enum PlaylistType: String {
     case Other        = "other"
 }
 
-public class Playlist {
+public struct Playlist {
     public let id:           Int
     public let createdAt:    String
     public let userId:       Int
