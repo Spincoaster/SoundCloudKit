@@ -8,7 +8,7 @@
 
 import SwiftyJSON
 
-public struct User: Hashable, Equatable {
+public struct User: Hashable, Equatable, JSONInitializable {
     public let id: Int
     public let permalink:            String
     public let username:             String
@@ -56,6 +56,32 @@ public struct User: Hashable, Equatable {
         followingsCount      = json["followings_count"].int
         publicFavoritesCount = json["public_favorites_count"].int
     }
+
+    public func toJSON() -> JSON {
+        var json                       = [:] as [String: AnyObject]
+        json["id"]                     = id
+        json["permalink"]              = permalink
+        json["username"]               = username
+        json["uri"]                    = uri
+        json["permalink_url"]          = permalinkUrl
+        json["avatar_url"]             = avatarUrl
+        json["country"]                = country
+        json["full_name"]              = fullName
+        json["city"]                   = city
+        json["description"]            = description
+        json["discogs-name"]           = discogsName
+        json["myspace-name"]           = myspaceName
+        json["website"]                = website
+        json["website_title"]          = websiteTitle
+        json["online"]                 = online
+        json["track_count"]            = trackCount
+        json["playlist_count"]         = playlistCount
+        json["followers_count"]        = followersCount
+        json["followings_count"]       = followingsCount
+        json["public_favorites_count"] = publicFavoritesCount
+        return JSON(json)
+    }
+}
 
 public func ==(lhs: User, rhs: User) -> Bool {
     return lhs.id == rhs.id
