@@ -20,7 +20,7 @@ public enum PlaylistType: String {
     case Other        = "other"
 }
 
-public struct Playlist {
+public struct Playlist: Hashable, Equatable {
     public let id:           Int
     public let createdAt:    String
     public let userId:       Int
@@ -50,6 +50,10 @@ public struct Playlist {
     public let playlistType: PlaylistType?
     public let tracks:       [Track]
     public let trackCount:   Int
+
+    public var hashValue: Int {
+        return id.hashValue
+    }
 
     public init(json: JSON) {
         id                  = json["id"].intValue
@@ -82,4 +86,8 @@ public struct Playlist {
         tracks              = json["tracks"].arrayValue.map({ Track(json: $0) })
         trackCount          = json["track_count"].intValue
     }
+}
+
+public func ==(lhs: Playlist, rhs: Playlist) -> Bool {
+    return lhs.id == rhs.id
 }
