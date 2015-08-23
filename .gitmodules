@@ -10,3 +10,6 @@
 [submodule "Carthage/Checkouts/Nimble"]
 	path = Carthage/Checkouts/Nimble
 	url = ssh://git@github.com/Quick/Nimble.git
+[submodule "Carthage/Checkouts/Breit"]
+	path = Carthage/Checkouts/Breit
+	url = ssh://git@github.com/kumabook/Breit.git

@@ -53,6 +53,8 @@
 		67773A221ABEA98A00E7BC8E /* PlaylistSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A211ABEA98A00E7BC8E /* PlaylistSpec.swift */; };
 		67773A231ABEA98A00E7BC8E /* PlaylistSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A211ABEA98A00E7BC8E /* PlaylistSpec.swift */; };
 		6778C8621B87493500ED627F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6778C8611B87493500ED627F /* Comment.swift */; };
+		67D41D0D1B8A146D0082454F /* Breit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D41D0C1B8A146D0082454F /* Breit.framework */; };
+		67D41D0F1B8A15070082454F /* Breit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D41D0E1B8A15070082454F /* Breit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +132,8 @@
 		67773A1E1ABEA8CB00E7BC8E /* playlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = playlist.json; path = Fixture/playlist.json; sourceTree = "<group>"; };
 		67773A211ABEA98A00E7BC8E /* PlaylistSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaylistSpec.swift; path = Spec/PlaylistSpec.swift; sourceTree = SOURCE_ROOT; };
 		6778C8611B87493500ED627F /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = Source/Comment.swift; sourceTree = SOURCE_ROOT; };
+		67D41D0C1B8A146D0082454F /* Breit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Breit.framework; path = Carthage/Build/iOS/Breit.framework; sourceTree = "<group>"; };
+		67D41D0E1B8A15070082454F /* Breit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Breit.framework; path = Carthage/Build/Mac/Breit.framework; sourceTree = "<group>"; };
 		67F59BEA1AB9C5960018DA25 /* SoundCloudKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F59BF51AB9C5970018DA25 /* SoundCloudKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundCloudKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F59C231AB9C8490018DA25 /* SoundCloudKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D41D0D1B8A146D0082454F /* Breit.framework in Frameworks */,
 				677739C31ABD7AEF00E7BC8E /* Alamofire.framework in Frameworks */,
 				677739C41ABD7AEF00E7BC8E /* SwiftyJSON.framework in Frameworks */,
 			);
@@ -159,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D41D0F1B8A15070082454F /* Breit.framework in Frameworks */,
 				677739C81ABD7B3000E7BC8E /* Alamofire.framework in Frameworks */,
 				677739C91ABD7B3000E7BC8E /* SwiftyJSON.framework in Frameworks */,
 			);
@@ -180,6 +186,8 @@
 		677739C51ABD7AFC00E7BC8E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				67D41D0E1B8A15070082454F /* Breit.framework */,
+				67D41D0C1B8A146D0082454F /* Breit.framework */,
 				677739FA1ABDAEC900E7BC8E /* iOS */,
 				677739F91ABDAEC300E7BC8E /* Mac */,
 			);

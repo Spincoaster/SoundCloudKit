@@ -7,6 +7,7 @@
 //
 
 import SwiftyJSON
+import Breit
 
 public enum Sharing: String {
     case Public  = "public"
@@ -101,6 +102,16 @@ public struct Track: Hashable, Equatable, JSONInitializable {
 
     public var hashValue: Int {
         return id.hashValue
+    }
+
+    public var thumbnailURL: NSURL? {
+        if let url = artworkUrl?.toURL() {
+            return url
+        } else if let url = user.avatarUrl.toURL() {
+            return url
+        } else {
+            return nil
+        }
     }
 
     public init(json: JSON) {
