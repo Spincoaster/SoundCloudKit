@@ -52,7 +52,7 @@ public enum TrackType: String {
     case Other       = "other"
 }
 
-public struct Track: Hashable, Equatable {
+public struct Track: Hashable, Equatable, JSONInitializable {
     public let id:                  Int
     public let createdAt:           String
     public let userId:              Int
