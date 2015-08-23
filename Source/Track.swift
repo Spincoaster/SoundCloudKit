@@ -52,7 +52,7 @@ public enum TrackType: String {
     case Other       = "other"
 }
 
-public struct Track {
+public struct Track: Hashable, Equatable {
     public let id:                  Int
     public let createdAt:           String
     public let userId:              Int
@@ -98,7 +98,11 @@ public struct Track {
     public let createdWith:         App
 
     public let attachmentsUri:      String?
-    
+
+    public var hashValue: Int {
+        return id.hashValue
+    }
+
     public init(json: JSON) {
         id                  = json["id"].intValue
         createdAt           = json["created_at"].stringValue
@@ -147,3 +151,8 @@ public struct Track {
         attachmentsUri      = json["attachments_uri"].string
     }
 }
+
+public func ==(lhs: Track, rhs: Track) -> Bool {
+    return lhs.id == rhs.id
+}
+
