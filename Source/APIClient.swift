@@ -18,12 +18,11 @@ public class APIClient {
 
     public var manager: Alamofire.Manager!
 
-    public struct Config {
-        public static var accessToken: AccessToken?
-    }
+    public static var clientId     = ""
+    public class var baseURLString = "https://api.soundcloud.com"
+    public static var accessToken: AccessToken?
 
-    public class var baseURLString: String       { return "http://soundcloud.com" }
-    public class var accessToken:   AccessToken? { return Config.accessToken }
+    public class var isLoggedIn: Bool { return accessToken != nil }
 
     public init() {
         manager = Alamofire.Manager(configuration: NSURLSessionConfiguration.ephemeralSessionConfiguration())
@@ -91,16 +90,11 @@ public class APIClient {
             let URL = NSURL(string: APIClient.baseURLString + path)!
             var req: NSURLRequest
             let _req = NSMutableURLRequest(URL: URL)
-
             _req.HTTPMethod = method.rawValue
-
             if let token = APIClient.accessToken {
-                _req.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-            }
-            if let clientId = APIClientConfig.clientId {
-               req = U.encode(_req, parameters: ["client_id": clientId]).0
+                req = U.encode(_req, parameters: ["oauth_token": token, "client_id": clientId]).0
             } else {
-               req = _req
+                req = U.encode(_req, parameters: ["client_id": clientId]).0
             }
             switch self {
             case User:             return req
