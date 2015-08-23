@@ -13,19 +13,53 @@ public protocol JSONInitializable {
     init(json: JSON)
 }
 
+public typealias RequestCallback = (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void
+
 public class APIClient {
     public typealias AccessToken = String
 
     public var manager: Alamofire.Manager!
 
     public static var clientId     = ""
-    public class var baseURLString = "https://api.soundcloud.com"
+    public static var baseURLString = "https://api.soundcloud.com"
     public static var accessToken: AccessToken?
 
     public class var isLoggedIn: Bool { return accessToken != nil }
 
     public init() {
         manager = Alamofire.Manager(configuration: NSURLSessionConfiguration.ephemeralSessionConfiguration())
+    }
+
+    public func fetch(route: Router, callback: RequestCallback) {
+        self.manager.request(route).validate(statusCode: 200..<300).responseJSON(options: .allZeros) {(req: NSURLRequest, res: NSHTTPURLResponse?, obj: AnyObject?, error: NSError?) -> Void in
+            callback(req, res, obj, error)
+        }
+    }
+
+    public func fetchItem<T: JSONInitializable>(route: Router, callback: (NSURLRequest, NSHTTPURLResponse?, T?, NSError?) -> Void) {
+        manager
+            .request(route)
+            .validate(statusCode: 200..<300)
+            .responseJSON(options: .allZeros) { req, res, obj, error in
+            if let e = error {
+                callback(req, res, nil, e)
+            } else {
+                callback(req, res, T(json: JSON(obj!)), error)
+            }
+        }
+    }
+
+    public func fetchItems<T: JSONInitializable>(route: Router, callback: (NSURLRequest, NSHTTPURLResponse?, [T]?, NSError?) -> Void) {
+        manager
+            .request(route)
+            .validate(statusCode: 200..<300)
+            .responseJSON(options: .allZeros) { req, res, obj, error in
+                if let e = error {
+                    callback(req, res, nil, e)
+                } else {
+                    callback(req, res, JSON(obj!).arrayValue.map { T(json: $0) }, error)
+                }
+        }
     }
 
     public enum Router: URLRequestConvertible {
