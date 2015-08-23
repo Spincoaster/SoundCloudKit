@@ -47,7 +47,7 @@ public struct Playlist {
     public let streamable:   Bool
     public let downloadable: Bool
     public let ean:          String
-    public let playlistType: PlaylistType
+    public let playlistType: PlaylistType?
     public let tracks:       [Track]
     public let trackCount:   Int
 
@@ -78,7 +78,7 @@ public struct Playlist {
         streamable          = json["streamable"].boolValue
         downloadable        = json["downloadable"].boolValue
         ean                 = json["ean"].stringValue
-        playlistType        = PlaylistType(rawValue: json["playlist_type"].stringValue)!
+        playlistType        = PlaylistType(rawValue: json["playlist_type"].stringValue)
         tracks              = json["tracks"].arrayValue.map({ Track(json: $0) })
         trackCount          = json["track_count"].intValue
     }
