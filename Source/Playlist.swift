@@ -20,7 +20,7 @@ public enum PlaylistType: String {
     case Other        = "other"
 }
 
-public struct Playlist: Hashable, Equatable {
+public struct Playlist: Hashable, Equatable, JSONInitializable {
     public let id:           Int
     public let createdAt:    String
     public let userId:       Int
