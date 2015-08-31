@@ -41,11 +41,11 @@ public class APIClient {
             .request(route)
             .validate(statusCode: 200..<300)
             .responseJSON(options: .allZeros) { req, res, obj, error in
-            if let e = error {
-                callback(req, res, nil, e)
-            } else {
-                callback(req, res, T(json: JSON(obj!)), error)
-            }
+                if let e = error {
+                    callback(req, res, nil, e)
+                } else {
+                    callback(req, res, T(json: JSON(obj!)), error)
+                }
         }
     }
 
@@ -66,6 +66,7 @@ public class APIClient {
         /* connect */
 //        case Connect
         /* users */
+        case Users(String)
         case User(String)
         case TracksOfUser(SoundCloudKit.User)
         case PlaylistsOfUser(SoundCloudKit.User)
@@ -91,11 +92,15 @@ public class APIClient {
         case Me
         /* me/connections */
         /* me/activities */
+        case Activities
+        case NextActivities(String)
+        case FutureActivities(String)
         /* apps */
         /* resolve */
         /* oembed */
         var method: Alamofire.Method {
             switch self {
+            case Users:            return .GET
             case User:             return .GET
             case TracksOfUser:     return .GET
             case PlaylistsOfUser:  return .GET
@@ -104,10 +109,14 @@ public class APIClient {
             case Track:            return .GET
             case Playlist:         return .GET
             case Me:               return .GET
+            case Activities:       return .GET
+            case NextActivities:   return .GET
+            case FutureActivities: return .GET
             }
         }
         var path: String {
             switch self {
+            case Users(let q):               return "/users"
             case User(let userId):           return "/users/\(userId)"
             case TracksOfUser(let user):     return "/users/\(user.id)/tracks"
             case PlaylistsOfUser(let user):  return "/users/\(user.id)/playlists"
@@ -116,30 +125,44 @@ public class APIClient {
             case Track(let trackId):         return "/tracks/\(trackId)"
             case Playlist(let playlistId):   return "/playlists/\(playlistId)"
             case Me:                         return "/me"
+            case Activities:                 return "/me/activities"
+            case NextActivities(let href):   return ""
+            case FutureActivities(let href): return ""
+            }
+        }
+        var url: NSURL {
+            switch self {
+            case NextActivities(let href):   return NSURL(string: href)!
+            case FutureActivities(let href): return NSURL(string: href)!
+            default:                         return NSURL(string: APIClient.baseURLString + path)!
+            }
+        }
+        var params: [String: AnyObject] {
+            switch self {
+            case Users(let q):               return ["q": q]
+            case User(let userId):           return [:]
+            case TracksOfUser(let user):     return [:]
+            case PlaylistsOfUser(let user):  return [:]
+            case FollowingsOfUser(let user): return [:]
+            case FavoritesOfUser(let user):  return [:]
+            case Track(let trackId):         return [:]
+            case Playlist(let playlistId):   return [:]
+            case Me:                         return [:]
+            case Activities:                 return [:]
+            case NextActivities(let href):   return [:]
+            case FutureActivities(let href): return [:]
             }
         }
         public var URLRequest: NSURLRequest {
-            let J = Alamofire.ParameterEncoding.JSON
             let U = Alamofire.ParameterEncoding.URL
-            let URL = NSURL(string: APIClient.baseURLString + path)!
-            var req: NSURLRequest
-            let _req = NSMutableURLRequest(URL: URL)
-            _req.HTTPMethod = method.rawValue
+            let req = NSMutableURLRequest(URL: url)
+            req.HTTPMethod = method.rawValue
+            var params = self.params
+            params["client_id"] = clientId
             if let token = APIClient.accessToken {
-                req = U.encode(_req, parameters: ["oauth_token": token, "client_id": clientId]).0
-            } else {
-                req = U.encode(_req, parameters: ["client_id": clientId]).0
+                params["oauth_token"] = token
             }
-            switch self {
-            case User:             return req
-            case TracksOfUser:     return req
-            case PlaylistsOfUser:  return req
-            case FollowingsOfUser: return req
-            case FavoritesOfUser:  return req
-            case Track:            return req
-            case Playlist:         return req
-            case Me:               return req
-            }
+            return U.encode(req, parameters: params).0
         }
     }
 }
