@@ -86,6 +86,16 @@ public struct Playlist: Hashable, Equatable, JSONInitializable {
         tracks              = json["tracks"].arrayValue.map({ Track(json: $0) })
         trackCount          = json["track_count"].intValue
     }
+
+    public var thumbnailURL: NSURL? {
+        if let url = artworkUrl?.toURL() {
+            return url
+        } else if let url = user.avatarUrl.toURL() {
+            return url
+        } else {
+            return nil
+        }
+    }
 }
 
 public func ==(lhs: Playlist, rhs: Playlist) -> Bool {
