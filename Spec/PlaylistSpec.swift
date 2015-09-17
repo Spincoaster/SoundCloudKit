@@ -17,7 +17,7 @@ class PlaylistSpec: QuickSpec {
             it ("should be constructed with json") {
                 let json = JSON(SpecHelper.fixtureJSONObject(fixtureNamed: "playlist")!)
 
-                var playlist = Playlist(json: json)
+                let playlist = Playlist(json: json)
                 expect(playlist.id).to(equal(405726))
                 expect(playlist.createdAt).to(equal("2010/11/02 09:24:50 +0000"))
                 expect(playlist.userId).to(equal(3207))

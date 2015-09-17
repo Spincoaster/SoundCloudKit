@@ -13,7 +13,7 @@ public protocol JSONInitializable {
     init(json: JSON)
 }
 
-public typealias RequestCallback = (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void
+public typealias RequestCallback = (NSURLRequest?, NSHTTPURLResponse?, Result<AnyObject>) -> Void
 
 public class APIClient {
     public typealias AccessToken = String
@@ -31,33 +31,33 @@ public class APIClient {
     }
 
     public func fetch(route: Router, callback: RequestCallback) {
-        self.manager.request(route).validate(statusCode: 200..<300).responseJSON(options: .allZeros) {(req: NSURLRequest, res: NSHTTPURLResponse?, obj: AnyObject?, error: NSError?) -> Void in
-            callback(req, res, obj, error)
+        self.manager.request(route).validate(statusCode: 200..<300).responseJSON(options: .AllowFragments) {(req: NSURLRequest?, res: NSHTTPURLResponse?, result: Result<AnyObject>) -> Void in
+            callback(req, res, result)
         }
     }
 
-    public func fetchItem<T: JSONInitializable>(route: Router, callback: (NSURLRequest, NSHTTPURLResponse?, T?, NSError?) -> Void) {
+    public func fetchItem<T: JSONInitializable>(route: Router, callback: (NSURLRequest?, NSHTTPURLResponse?, Result<T>) -> Void) {
         manager
             .request(route)
             .validate(statusCode: 200..<300)
-            .responseJSON(options: .allZeros) { req, res, obj, error in
-                if let e = error {
-                    callback(req, res, nil, e)
+            .responseJSON(options: .AllowFragments) { req, res, result in
+                if let e = result.error {
+                    callback(req, res, Result.Failure(result.data, e))
                 } else {
-                    callback(req, res, T(json: JSON(obj!)), error)
+                    callback(req, res, Result.Success(T(json: JSON(result.value!))))
                 }
         }
     }
 
-    public func fetchItems<T: JSONInitializable>(route: Router, callback: (NSURLRequest, NSHTTPURLResponse?, [T]?, NSError?) -> Void) {
+    public func fetchItems<T: JSONInitializable>(route: Router, callback: (NSURLRequest?, NSHTTPURLResponse?, Result<[T]>) -> Void) {
         manager
             .request(route)
             .validate(statusCode: 200..<300)
-            .responseJSON(options: .allZeros) { req, res, obj, error in
-                if let e = error {
-                    callback(req, res, nil, e)
+            .responseJSON(options: .AllowFragments) { req, res, result in
+                if let e = result.error {
+                    callback(req, res, Result.Failure(result.data, e))
                 } else {
-                    callback(req, res, JSON(obj!).arrayValue.map { T(json: $0) }, error)
+                    callback(req, res, Result.Success(JSON(rawValue: result.value!)!.arrayValue.map { T(json: $0) }))
                 }
         }
     }
@@ -116,7 +116,7 @@ public class APIClient {
         }
         var path: String {
             switch self {
-            case Users(let q):               return "/users"
+            case Users(_):                   return "/users"
             case User(let userId):           return "/users/\(userId)"
             case TracksOfUser(let user):     return "/users/\(user.id)/tracks"
             case PlaylistsOfUser(let user):  return "/users/\(user.id)/playlists"
@@ -126,8 +126,8 @@ public class APIClient {
             case Playlist(let playlistId):   return "/playlists/\(playlistId)"
             case Me:                         return "/me"
             case Activities:                 return "/me/activities"
-            case NextActivities(let href):   return ""
-            case FutureActivities(let href): return ""
+            case NextActivities(_):          return ""
+            case FutureActivities(_):        return ""
             }
         }
         var url: NSURL {
@@ -139,21 +139,21 @@ public class APIClient {
         }
         var params: [String: AnyObject] {
             switch self {
-            case Users(let q):               return ["q": q]
-            case User(let userId):           return [:]
-            case TracksOfUser(let user):     return [:]
-            case PlaylistsOfUser(let user):  return [:]
-            case FollowingsOfUser(let user): return [:]
-            case FavoritesOfUser(let user):  return [:]
-            case Track(let trackId):         return [:]
-            case Playlist(let playlistId):   return [:]
-            case Me:                         return [:]
-            case Activities:                 return [:]
-            case NextActivities(let href):   return [:]
-            case FutureActivities(let href): return [:]
+            case Users(let q):        return ["q": q]
+            case User(_):             return [:]
+            case TracksOfUser(_):     return [:]
+            case PlaylistsOfUser(_):  return [:]
+            case FollowingsOfUser(_): return [:]
+            case FavoritesOfUser(_):  return [:]
+            case Track(_):            return [:]
+            case Playlist(_):         return [:]
+            case Me:                  return [:]
+            case Activities:          return [:]
+            case NextActivities(_):   return [:]
+            case FutureActivities(_): return [:]
             }
         }
-        public var URLRequest: NSURLRequest {
+        public var URLRequest: NSMutableURLRequest {
             let U = Alamofire.ParameterEncoding.URL
             let req = NSMutableURLRequest(URL: url)
             req.HTTPMethod = method.rawValue

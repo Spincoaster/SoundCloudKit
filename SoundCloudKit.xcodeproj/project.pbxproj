@@ -32,7 +32,6 @@
 		677739FF1ABDAFB200E7BC8E /* SoundCloudKit_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739A31ABC488F00E7BC8E /* SoundCloudKit_MacTests.swift */; };
 		67773A001ABDB00100E7BC8E /* track.json in Resources */ = {isa = PBXBuildFile; fileRef = 677739DE1ABD8B8300E7BC8E /* track.json */; };
 		67773A011ABDB00100E7BC8E /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 677739D81ABD8AA200E7BC8E /* user.json */; };
-		67773A021ABDB06700E7BC8E /* SoundCloudKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67F59C231AB9C8490018DA25 /* SoundCloudKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67773A051ABDB5A800E7BC8E /* track.json in Resources */ = {isa = PBXBuildFile; fileRef = 677739DE1ABD8B8300E7BC8E /* track.json */; };
 		67773A061ABDB5A800E7BC8E /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 677739D81ABD8AA200E7BC8E /* user.json */; };
 		67773A081ABDB5BF00E7BC8E /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 677739C21ABD7AEF00E7BC8E /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -53,9 +52,19 @@
 		67773A221ABEA98A00E7BC8E /* PlaylistSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A211ABEA98A00E7BC8E /* PlaylistSpec.swift */; };
 		67773A231ABEA98A00E7BC8E /* PlaylistSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A211ABEA98A00E7BC8E /* PlaylistSpec.swift */; };
 		6778C8621B87493500ED627F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6778C8611B87493500ED627F /* Comment.swift */; };
+		67916DA91BAEB2A3004419B0 /* Breit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67D41D0E1B8A15070082454F /* Breit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67916DAA1BAEB2AB004419B0 /* Breit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D41D0C1B8A146D0082454F /* Breit.framework */; };
+		67916DAB1BAEB2AF004419B0 /* Breit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67D41D0C1B8A146D0082454F /* Breit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67916DAC1BAEB2B5004419B0 /* Breit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D41D0C1B8A146D0082454F /* Breit.framework */; };
+		67916DAD1BAEB2E8004419B0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C61ABD7B3000E7BC8E /* Alamofire.framework */; };
+		67916DAE1BAEB30F004419B0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C11ABD7AEF00E7BC8E /* Alamofire.framework */; };
+		67916DAF1BAEB316004419B0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739E81ABDA7F300E7BC8E /* Nimble.framework */; };
 		67D41D0D1B8A146D0082454F /* Breit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D41D0C1B8A146D0082454F /* Breit.framework */; };
 		67D41D0F1B8A15070082454F /* Breit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D41D0E1B8A15070082454F /* Breit.framework */; };
 		67D41D151B8DCBD30082454F /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D41D141B8DCBD30082454F /* Activity.swift */; };
+		67E494171BAB0A0000695CA2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6736D01E1B86D32600CCDD80 /* APIClient.swift */; };
+		67E494181BAB0A0D00695CA2 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6778C8611B87493500ED627F /* Comment.swift */; };
+		67E494191BAB0A0D00695CA2 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D41D141B8DCBD30082454F /* Activity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +91,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				67773A021ABDB06700E7BC8E /* SoundCloudKit.framework in CopyFiles */,
+				67916DA91BAEB2A3004419B0 /* Breit.framework in CopyFiles */,
 				677739FB1ABDAF2100E7BC8E /* SwiftyJSON.framework in CopyFiles */,
 				677739FC1ABDAF2100E7BC8E /* Alamofire.framework in CopyFiles */,
 				677739FD1ABDAF2100E7BC8E /* Quick.framework in CopyFiles */,
@@ -100,6 +109,7 @@
 				67773A091ABDB5BF00E7BC8E /* Alamofire.framework in CopyFiles */,
 				67773A0A1ABDB5BF00E7BC8E /* Quick.framework in CopyFiles */,
 				67773A0B1ABDB5BF00E7BC8E /* Nimble.framework in CopyFiles */,
+				67916DAB1BAEB2AF004419B0 /* Breit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +169,9 @@
 			files = (
 				677739EB1ABDA7F300E7BC8E /* Quick.framework in Frameworks */,
 				677739E71ABDA7F300E7BC8E /* SwiftyJSON.framework in Frameworks */,
+				67916DAF1BAEB316004419B0 /* Nimble.framework in Frameworks */,
+				67916DAE1BAEB30F004419B0 /* Alamofire.framework in Frameworks */,
+				67916DAA1BAEB2AB004419B0 /* Breit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +191,8 @@
 			files = (
 				677739F51ABDADD000E7BC8E /* Nimble.framework in Frameworks */,
 				677739F61ABDADD000E7BC8E /* Quick.framework in Frameworks */,
+				67916DAD1BAEB2E8004419B0 /* Alamofire.framework in Frameworks */,
+				67916DAC1BAEB2B5004419B0 /* Breit.framework in Frameworks */,
 				677739F21ABDADCF00E7BC8E /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,8 +203,6 @@
 		677739C51ABD7AFC00E7BC8E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				67D41D0E1B8A15070082454F /* Breit.framework */,
-				67D41D0C1B8A146D0082454F /* Breit.framework */,
 				677739FA1ABDAEC900E7BC8E /* iOS */,
 				677739F91ABDAEC300E7BC8E /* Mac */,
 			);
@@ -209,6 +222,7 @@
 		677739F91ABDAEC300E7BC8E /* Mac */ = {
 			isa = PBXGroup;
 			children = (
+				67D41D0E1B8A15070082454F /* Breit.framework */,
 				677739C71ABD7B3000E7BC8E /* SwiftyJSON.framework */,
 				677739C61ABD7B3000E7BC8E /* Alamofire.framework */,
 				677739F41ABDADD000E7BC8E /* Quick.framework */,
@@ -220,6 +234,7 @@
 		677739FA1ABDAEC900E7BC8E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				67D41D0C1B8A146D0082454F /* Breit.framework */,
 				677739C21ABD7AEF00E7BC8E /* SwiftyJSON.framework */,
 				677739C11ABD7AEF00E7BC8E /* Alamofire.framework */,
 				677739E91ABDA7F300E7BC8E /* Quick.framework */,
@@ -415,7 +430,9 @@
 		67F59BE11AB9C5960018DA25 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Spincoaster;
 				TargetAttributes = {
 					67F59BE91AB9C5960018DA25 = {
@@ -522,6 +539,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67E494181BAB0A0D00695CA2 /* Comment.swift in Sources */,
+				67E494191BAB0A0D00695CA2 /* Activity.swift in Sources */,
+				67E494171BAB0A0000695CA2 /* APIClient.swift in Sources */,
 				677739E31ABD9F7400E7BC8E /* App.swift in Sources */,
 				677739D21ABD898B00E7BC8E /* User.swift in Sources */,
 				677739DD1ABD8B4D00E7BC8E /* Track.swift in Sources */,
@@ -578,6 +598,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -658,6 +679,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spincoaster.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -680,6 +702,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spincoaster.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -700,6 +723,7 @@
 				INFOPLIST_FILE = Spec/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spincoaster.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -715,6 +739,7 @@
 				INFOPLIST_FILE = Spec/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spincoaster.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -742,6 +767,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spincoaster.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -769,6 +795,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spincoaster.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -784,6 +811,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -793,6 +821,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spincoaster.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -809,11 +838,13 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Spec/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spincoaster.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};

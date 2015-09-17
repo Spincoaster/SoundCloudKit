@@ -17,7 +17,7 @@ class UserSpec: QuickSpec {
             it ("should be constructed with json") {
                 let json = JSON(SpecHelper.fixtureJSONObject(fixtureNamed: "user")!)
 
-                var user = User(json: json)
+                let user = User(json: json)
                 expect(user.id).to(equal(3207))
                 expect(user.permalink).to(equal("jwagener"))
                 expect(user.username).to(equal("Johannes Wagener"))

@@ -17,7 +17,7 @@ class TrackSpec: QuickSpec {
             it ("should be constructed with json") {
                 let json = JSON(SpecHelper.fixtureJSONObject(fixtureNamed: "track")!)
 
-                var track = Track(json: json)
+                let track = Track(json: json)
                 expect(track.id).to(equal(13158665))
                 expect(track.createdAt).to(equal("2011/04/06 15:37:43 +0000"))
                 expect(track.userId).to(equal(3699101))
