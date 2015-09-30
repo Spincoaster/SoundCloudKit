@@ -154,13 +154,29 @@ public class APIClient {
             case FutureActivities(_): return [:]
             }
         }
+        var needsOAuthToken: Bool {
+            switch self {
+            case Users(_):            return false
+            case User(_):             return false
+            case TracksOfUser(_):     return false
+            case PlaylistsOfUser(_):  return false
+            case FollowingsOfUser(_): return false
+            case FavoritesOfUser(_):  return false
+            case Track(_):            return false
+            case Playlist(_):         return false
+            case Me:                  return true
+            case Activities:          return true
+            case NextActivities(_):   return true
+            case FutureActivities(_): return true
+            }
+        }
         public var URLRequest: NSMutableURLRequest {
             let U = Alamofire.ParameterEncoding.URL
             let req = NSMutableURLRequest(URL: url)
             req.HTTPMethod = method.rawValue
             var params = self.params
             params["client_id"] = clientId
-            if let token = APIClient.accessToken {
+            if let token = APIClient.accessToken where self.needsOAuthToken {
                 params["oauth_token"] = token
             }
             return U.encode(req, parameters: params).0
