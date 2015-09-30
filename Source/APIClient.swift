@@ -23,6 +23,7 @@ public class APIClient {
     public static var clientId     = ""
     public static var baseURLString = "https://api.soundcloud.com"
     public static var accessToken: AccessToken?
+    public static var sharedInstance: APIClient = APIClient()
 
     public class var isLoggedIn: Bool { return accessToken != nil }
 
