@@ -13,7 +13,7 @@ public protocol JSONInitializable {
     init(json: JSON)
 }
 
-public typealias RequestCallback = (NSURLRequest?, NSHTTPURLResponse?, Result<AnyObject>) -> Void
+public typealias RequestCallback = (NSURLRequest?, NSHTTPURLResponse?, Result<AnyObject, NSError>) -> Void
 
 public class APIClient {
     public typealias AccessToken = String
@@ -32,33 +32,33 @@ public class APIClient {
     }
 
     public func fetch(route: Router, callback: RequestCallback) {
-        self.manager.request(route).validate(statusCode: 200..<300).responseJSON(options: .AllowFragments) {(req: NSURLRequest?, res: NSHTTPURLResponse?, result: Result<AnyObject>) -> Void in
-            callback(req, res, result)
+        self.manager.request(route).validate(statusCode: 200..<300).responseJSON(options: .AllowFragments) { response in
+            callback(response.request, response.response, response.result)
         }
     }
 
-    public func fetchItem<T: JSONInitializable>(route: Router, callback: (NSURLRequest?, NSHTTPURLResponse?, Result<T>) -> Void) {
+    public func fetchItem<T: JSONInitializable>(route: Router, callback: (NSURLRequest?, NSHTTPURLResponse?, Result<T, NSError>) -> Void) {
         manager
             .request(route)
             .validate(statusCode: 200..<300)
-            .responseJSON(options: .AllowFragments) { req, res, result in
-                if let e = result.error {
-                    callback(req, res, Result.Failure(result.data, e))
+            .responseJSON(options: .AllowFragments) { response in
+                if let e = response.result.error {
+                    callback(response.request, response.response, Result.Failure(e))
                 } else {
-                    callback(req, res, Result.Success(T(json: JSON(result.value!))))
+                    callback(response.request, response.response, Result.Success(T(json: JSON(response.result.value!))))
                 }
         }
     }
 
-    public func fetchItems<T: JSONInitializable>(route: Router, callback: (NSURLRequest?, NSHTTPURLResponse?, Result<[T]>) -> Void) {
+    public func fetchItems<T: JSONInitializable>(route: Router, callback: (NSURLRequest?, NSHTTPURLResponse?, Result<[T], NSError>) -> Void) {
         manager
             .request(route)
             .validate(statusCode: 200..<300)
-            .responseJSON(options: .AllowFragments) { req, res, result in
-                if let e = result.error {
-                    callback(req, res, Result.Failure(result.data, e))
+            .responseJSON(options: .AllowFragments) { response in
+                if let e = response.result.error {
+                    callback(response.request, response.response, Result.Failure(e))
                 } else {
-                    callback(req, res, Result.Success(JSON(rawValue: result.value!)!.arrayValue.map { T(json: $0) }))
+                    callback(response.request, response.response, Result.Success(JSON(rawValue: response.result.value!)!.arrayValue.map { T(json: $0) }))
                 }
         }
     }
