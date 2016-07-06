@@ -1,5 +1,5 @@
 github "Alamofire/Alamofire" "3.3.0"
-github "kumabook/Breit" "0.2.0"
+github "kumabook/Breit" "0.2.1"
 github "Quick/Nimble" "v3.2.0"
 github "Quick/Quick" "v0.9.1"
 github "SwiftyJSON/SwiftyJSON" "2a5b70f06001316d4fb54501edc70b4084705da0"
