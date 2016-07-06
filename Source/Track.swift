@@ -53,6 +53,18 @@ public enum TrackType: String {
     case Other       = "other"
 }
 
+public enum ArtworkType: String {
+    case T500x500  = "t500x500"
+    case Crop      = "crop"
+    case T300x300  = "t300x300"
+    case Large     = "large"
+    case T67x67    = "t67x67"
+    case Badge     = "badge"
+    case Small     = "small"
+    case Tiny      = "tiny"
+    case Mini      = "mini"
+}
+
 public struct Track: Hashable, Equatable, JSONInitializable {
     public let id:                  Int
     public let createdAt:           String
@@ -112,6 +124,18 @@ public struct Track: Hashable, Equatable, JSONInitializable {
         } else {
             return nil
         }
+    }
+
+    public var artworkURL: NSURL? {
+        return getArtworURL(.T500x500)
+    }
+
+    public func getArtworURL(type: ArtworkType) -> NSURL? {
+        guard let artworkUrl = artworkUrl else { return thumbnailURL }
+        if let url = NSURL(string: artworkUrl.replace("large", withString: type.rawValue)) {
+            return url
+        }
+        return thumbnailURL
     }
 
     public init(json: JSON) {
