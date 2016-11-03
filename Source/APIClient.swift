@@ -13,52 +13,52 @@ public protocol JSONInitializable {
     init(json: JSON)
 }
 
-public typealias RequestCallback = (NSURLRequest?, NSHTTPURLResponse?, Result<AnyObject, NSError>) -> Void
+public typealias RequestCallback = (URLRequest?, HTTPURLResponse?, Result<Any>) -> Void
 
-public class APIClient {
+open class APIClient {
     public typealias AccessToken = String
 
-    public var manager: Alamofire.Manager!
+    open var manager: Alamofire.SessionManager
 
-    public static var clientId     = ""
-    public static var baseURLString = "https://api.soundcloud.com"
-    public static var accessToken: AccessToken?
-    public static var sharedInstance: APIClient = APIClient()
+    open static var clientId     = ""
+    open static var baseURLString = "https://api.soundcloud.com"
+    open static var accessToken: AccessToken?
+    open static var sharedInstance: APIClient = APIClient()
 
-    public class var isLoggedIn: Bool { return accessToken != nil }
+    open class var isLoggedIn: Bool { return accessToken != nil }
 
     public init() {
-        manager = Alamofire.Manager(configuration: NSURLSessionConfiguration.ephemeralSessionConfiguration())
+        manager = Alamofire.SessionManager(configuration: URLSessionConfiguration.ephemeral)
     }
 
-    public func fetch(route: Router, callback: RequestCallback) {
-        self.manager.request(route).validate(statusCode: 200..<300).responseJSON(options: .AllowFragments) { response in
+    open func fetch(_ route: Router, callback: @escaping RequestCallback) {
+        self.manager.request(route).validate(statusCode: 200..<300).responseJSON(options: .allowFragments) { response in
             callback(response.request, response.response, response.result)
         }
     }
 
-    public func fetchItem<T: JSONInitializable>(route: Router, callback: (NSURLRequest?, NSHTTPURLResponse?, Result<T, NSError>) -> Void) {
+    open func fetchItem<T: JSONInitializable>(_ route: Router, callback: @escaping (URLRequest?, HTTPURLResponse?, Result<T>) -> Void) {
         manager
             .request(route)
             .validate(statusCode: 200..<300)
-            .responseJSON(options: .AllowFragments) { response in
+            .responseJSON(options: .allowFragments) { response in
                 if let e = response.result.error {
-                    callback(response.request, response.response, Result.Failure(e))
+                    callback(response.request, response.response, Result.failure(e))
                 } else {
-                    callback(response.request, response.response, Result.Success(T(json: JSON(response.result.value!))))
+                    callback(response.request, response.response, Result.success(T(json: JSON(response.result.value!))))
                 }
         }
     }
 
-    public func fetchItems<T: JSONInitializable>(route: Router, callback: (NSURLRequest?, NSHTTPURLResponse?, Result<[T], NSError>) -> Void) {
+    open func fetchItems<T: JSONInitializable>(_ route: Router, callback: @escaping (URLRequest?, HTTPURLResponse?, Result<[T]>) -> Void) {
         manager
             .request(route)
             .validate(statusCode: 200..<300)
-            .responseJSON(options: .AllowFragments) { response in
+            .responseJSON(options: .allowFragments) { response in
                 if let e = response.result.error {
-                    callback(response.request, response.response, Result.Failure(e))
+                    callback(response.request, response.response, Result.failure(e))
                 } else {
-                    callback(response.request, response.response, Result.Success(JSON(rawValue: response.result.value!)!.arrayValue.map { T(json: $0) }))
+                    callback(response.request, response.response, Result.success(JSON(rawValue: response.result.value!)!.arrayValue.map { T(json: $0) }))
                 }
         }
     }
@@ -67,119 +67,118 @@ public class APIClient {
         /* connect */
 //        case Connect
         /* users */
-        case Users(String)
-        case User(String)
-        case TracksOfUser(SoundCloudKit.User)
-        case PlaylistsOfUser(SoundCloudKit.User)
-        case FollowingsOfUser(SoundCloudKit.User)
+        case users(String)
+        case user(String)
+        case tracksOfUser(SoundCloudKit.User)
+        case playlistsOfUser(SoundCloudKit.User)
+        case followingsOfUser(SoundCloudKit.User)
 //        case FollowersOfUser(SoundCloudKit.User)
 //        case CommentsOfUser(SoundCloudKit.User)
-        case FavoritesOfUser(SoundCloudKit.User)
+        case favoritesOfUser(SoundCloudKit.User)
 //        case GroupsOfUser(SoundCloudKit.User)
 //        case WebProfilesOfUser(SoundCloudKit.User)
         /* tracks */
-        case Track(String)
+        case track(String)
 //        case CommentsOfTrack(SoundCloudKit.Track)
 //        case CommentOfTrack(SoundCloudKit.Track, SoundCloudKit.Comment)
 //        case FavoritersOfTrack(SoundCloudKit.Track)
 //        case FavoriterOfTrack(SoundCloudKit.Track, SoundCloudKit.User)
 //        case SecretTokenOfTrack(SoundCloudKit.Track)
         /* playlists */
-        case Playlist(String)
+        case playlist(String)
 //        case SecretTokenOfPlaylist(SoundCloudKit.Playlist)
         /* groups */
         /* comments */
         /* me */
-        case Me
+        case me
         /* me/connections */
         /* me/activities */
-        case Activities
-        case NextActivities(String)
-        case FutureActivities(String)
+        case activities
+        case nextActivities(String)
+        case futureActivities(String)
         /* apps */
         /* resolve */
         /* oembed */
-        var method: Alamofire.Method {
+        var method: Alamofire.HTTPMethod {
             switch self {
-            case Users:            return .GET
-            case User:             return .GET
-            case TracksOfUser:     return .GET
-            case PlaylistsOfUser:  return .GET
-            case FollowingsOfUser: return .GET
-            case FavoritesOfUser:  return .GET
-            case Track:            return .GET
-            case Playlist:         return .GET
-            case Me:               return .GET
-            case Activities:       return .GET
-            case NextActivities:   return .GET
-            case FutureActivities: return .GET
+            case .users:            return .get
+            case .user:             return .get
+            case .tracksOfUser:     return .get
+            case .playlistsOfUser:  return .get
+            case .followingsOfUser: return .get
+            case .favoritesOfUser:  return .get
+            case .track:            return .get
+            case .playlist:         return .get
+            case .me:               return .get
+            case .activities:       return .get
+            case .nextActivities:   return .get
+            case .futureActivities: return .get
             }
         }
         var path: String {
             switch self {
-            case Users(_):                   return "/users"
-            case User(let userId):           return "/users/\(userId)"
-            case TracksOfUser(let user):     return "/users/\(user.id)/tracks"
-            case PlaylistsOfUser(let user):  return "/users/\(user.id)/playlists"
-            case FollowingsOfUser(let user): return "/users/\(user.id)/followings"
-            case FavoritesOfUser(let user):  return "/users/\(user.id)/favorites"
-            case Track(let trackId):         return "/tracks/\(trackId)"
-            case Playlist(let playlistId):   return "/playlists/\(playlistId)"
-            case Me:                         return "/me"
-            case Activities:                 return "/me/activities"
-            case NextActivities(_):          return ""
-            case FutureActivities(_):        return ""
+            case .users(_):                   return "/users"
+            case .user(let userId):           return "/users/\(userId)"
+            case .tracksOfUser(let user):     return "/users/\(user.id)/tracks"
+            case .playlistsOfUser(let user):  return "/users/\(user.id)/playlists"
+            case .followingsOfUser(let user): return "/users/\(user.id)/followings"
+            case .favoritesOfUser(let user):  return "/users/\(user.id)/favorites"
+            case .track(let trackId):         return "/tracks/\(trackId)"
+            case .playlist(let playlistId):   return "/playlists/\(playlistId)"
+            case .me:                         return "/me"
+            case .activities:                 return "/me/activities"
+            case .nextActivities(_):          return ""
+            case .futureActivities(_):        return ""
             }
         }
-        var url: NSURL {
+        var url: URL {
             switch self {
-            case NextActivities(let href):   return NSURL(string: href)!
-            case FutureActivities(let href): return NSURL(string: href)!
-            default:                         return NSURL(string: APIClient.baseURLString + path)!
+            case .nextActivities(let href):   return URL(string: href)!
+            case .futureActivities(let href): return URL(string: href)!
+            default:                         return URL(string: APIClient.baseURLString + path)!
             }
         }
         var params: [String: AnyObject] {
             switch self {
-            case Users(let q):        return ["q": q]
-            case User(_):             return [:]
-            case TracksOfUser(_):     return [:]
-            case PlaylistsOfUser(_):  return [:]
-            case FollowingsOfUser(_): return [:]
-            case FavoritesOfUser(_):  return [:]
-            case Track(_):            return [:]
-            case Playlist(_):         return [:]
-            case Me:                  return [:]
-            case Activities:          return [:]
-            case NextActivities(_):   return [:]
-            case FutureActivities(_): return [:]
+            case .users(let q):        return ["q": q as AnyObject]
+            case .user(_):             return [:]
+            case .tracksOfUser(_):     return [:]
+            case .playlistsOfUser(_):  return [:]
+            case .followingsOfUser(_): return [:]
+            case .favoritesOfUser(_):  return [:]
+            case .track(_):            return [:]
+            case .playlist(_):         return [:]
+            case .me:                  return [:]
+            case .activities:          return [:]
+            case .nextActivities(_):   return [:]
+            case .futureActivities(_): return [:]
             }
         }
         var needsOAuthToken: Bool {
             switch self {
-            case Users(_):            return false
-            case User(_):             return false
-            case TracksOfUser(_):     return false
-            case PlaylistsOfUser(_):  return false
-            case FollowingsOfUser(_): return false
-            case FavoritesOfUser(_):  return false
-            case Track(_):            return false
-            case Playlist(_):         return false
-            case Me:                  return true
-            case Activities:          return true
-            case NextActivities(_):   return true
-            case FutureActivities(_): return true
+            case .users(_):            return false
+            case .user(_):             return false
+            case .tracksOfUser(_):     return false
+            case .playlistsOfUser(_):  return false
+            case .followingsOfUser(_): return false
+            case .favoritesOfUser(_):  return false
+            case .track(_):            return false
+            case .playlist(_):         return false
+            case .me:                  return true
+            case .activities:          return true
+            case .nextActivities(_):   return true
+            case .futureActivities(_): return true
             }
         }
-        public var URLRequest: NSMutableURLRequest {
-            let U = Alamofire.ParameterEncoding.URL
-            let req = NSMutableURLRequest(URL: url)
-            req.HTTPMethod = method.rawValue
+        public func asURLRequest() throws -> URLRequest {
+            var req = URLRequest(url: url)
+            req.httpMethod = method.rawValue
             var params = self.params
-            params["client_id"] = clientId
-            if let token = APIClient.accessToken where self.needsOAuthToken {
-                params["oauth_token"] = token
+            params["client_id"] = clientId as AnyObject?
+            if let token = APIClient.accessToken, self.needsOAuthToken {
+                params["oauth_token"] = token as AnyObject?
             }
-            return U.encode(req, parameters: params).0
+            return try URLEncoding.default.encode(req, with: params)
         }
     }
 }
