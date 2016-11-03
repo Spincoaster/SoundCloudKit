@@ -59,26 +59,26 @@ public struct User: Hashable, Equatable, JSONInitializable {
 
     public func toJSON() -> JSON {
         var json                       = [:] as [String: AnyObject]
-        json["id"]                     = id
-        json["permalink"]              = permalink
-        json["username"]               = username
-        json["uri"]                    = uri
-        json["permalink_url"]          = permalinkUrl
-        json["avatar_url"]             = avatarUrl
-        json["country"]                = country
-        json["full_name"]              = fullName
-        json["city"]                   = city
-        json["description"]            = description
-        json["discogs-name"]           = discogsName
-        json["myspace-name"]           = myspaceName
-        json["website"]                = website
-        json["website_title"]          = websiteTitle
-        json["online"]                 = online
-        json["track_count"]            = trackCount
-        json["playlist_count"]         = playlistCount
-        json["followers_count"]        = followersCount
-        json["followings_count"]       = followingsCount
-        json["public_favorites_count"] = publicFavoritesCount
+        json["id"]                     = id as AnyObject?
+        json["permalink"]              = permalink as AnyObject?
+        json["username"]               = username as AnyObject?
+        json["uri"]                    = uri as AnyObject?
+        json["permalink_url"]          = permalinkUrl as AnyObject?
+        json["avatar_url"]             = avatarUrl as AnyObject?
+        json["country"]                = country as AnyObject?
+        json["full_name"]              = fullName as AnyObject?
+        json["city"]                   = city as AnyObject?
+        json["description"]            = description as AnyObject?
+        json["discogs-name"]           = discogsName as AnyObject?
+        json["myspace-name"]           = myspaceName as AnyObject?
+        json["website"]                = website as AnyObject?
+        json["website_title"]          = websiteTitle as AnyObject?
+        json["online"]                 = online as AnyObject?
+        json["track_count"]            = trackCount as AnyObject?
+        json["playlist_count"]         = playlistCount as AnyObject?
+        json["followers_count"]        = followersCount as AnyObject?
+        json["followings_count"]       = followingsCount as AnyObject?
+        json["public_favorites_count"] = publicFavoritesCount as AnyObject?
         return JSON(json)
     }
 }

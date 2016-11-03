@@ -87,7 +87,7 @@ public struct Playlist: Hashable, Equatable, JSONInitializable {
         trackCount          = json["track_count"].intValue
     }
 
-    public var thumbnailURL: NSURL? {
+    public var thumbnailURL: URL? {
         if let url = artworkUrl?.toURL() {
             return url
         } else if let url = user.avatarUrl.toURL() {

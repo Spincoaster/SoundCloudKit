@@ -9,6 +9,7 @@
 import SwiftyJSON
 import Breit
 
+
 public enum Sharing: String {
     case Public  = "public"
     case Private = "private"
@@ -116,7 +117,7 @@ public struct Track: Hashable, Equatable, JSONInitializable {
         return id.hashValue
     }
 
-    public var thumbnailURL: NSURL? {
+    public var thumbnailURL: URL? {
         if let url = artworkUrl?.toURL() {
             return url
         } else if let url = user.avatarUrl.toURL() {
@@ -126,13 +127,13 @@ public struct Track: Hashable, Equatable, JSONInitializable {
         }
     }
 
-    public var artworkURL: NSURL? {
+    public var artworkURL: URL? {
         return getArtworURL(.T500x500)
     }
 
-    public func getArtworURL(type: ArtworkType) -> NSURL? {
+    public func getArtworURL(_ type: ArtworkType) -> URL? {
         guard let artworkUrl = artworkUrl else { return thumbnailURL }
-        if let url = NSURL(string: artworkUrl.replace("large", withString: type.rawValue)) {
+        if let url = URL(string: artworkUrl.replace("large", withString: type.rawValue)) {
             return url
         }
         return thumbnailURL

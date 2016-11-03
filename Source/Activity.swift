@@ -41,8 +41,8 @@ public struct Activity: JSONInitializable  {
         case Conversation = "conversation"
     }
     public enum Origin {
-        case Track(SoundCloudKit.Track)
-        case Playlist(SoundCloudKit.Playlist)
+        case track(SoundCloudKit.Track)
+        case playlist(SoundCloudKit.Playlist)
     }
     public var type:      ActivityType
     public var createdAt: String
@@ -55,11 +55,11 @@ public struct Activity: JSONInitializable  {
         tags      = json["tags"].arrayValue.map { TagType(rawValue: $0.stringValue)! }
         switch type {
         case .Playlist:
-            origin    = Origin.Playlist(Playlist(json: json["origin"]))
+            origin    = Origin.playlist(Playlist(json: json["origin"]))
         case .PlaylistRepost:
-            origin    = Origin.Playlist(Playlist(json: json["origin"]))
+            origin    = Origin.playlist(Playlist(json: json["origin"]))
         default:
-            origin    = Origin.Track(Track(json: json["origin"]))
+            origin    = Origin.track(Track(json: json["origin"]))
         }
     }
 }
