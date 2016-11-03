@@ -1,17 +1,17 @@
 //
-//  SoundCloudKit.h
-//  SoundCloudKit
+//  SoundCloudKit-macOS.h
+//  SoundCloudKit-macOS
 //
 //  Created by Hiroki Kumamoto on 3/18/15.
 //  Copyright (c) 2015 Spincoaster. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Cocoa/Cocoa.h>
 
-//! Project version number for SoundCloudKit.
+//! Project version number for SoundCloudKit-macOS.
 FOUNDATION_EXPORT double SoundCloudKitVersionNumber;
 
-//! Project version string for SoundCloudKit.
+//! Project version string for SoundCloudKit-macOS.
 FOUNDATION_EXPORT const unsigned char SoundCloudKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SoundCloudKit/PublicHeader.h>
