@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "67F59C221AB9C8490018DA25"
+               BlueprintIdentifier = "67F59BE91AB9C5960018DA25"
                BuildableName = "SoundCloudKit.framework"
-               BlueprintName = "SoundCloudKitMac"
-               ReferencedContainer = "container:SoundCloudKit.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "67F59C2C1AB9C84A0018DA25"
-               BuildableName = "SoundCloudKit-MacTests.xctest"
-               BlueprintName = "SoundCloudKit-MacTests"
+               BlueprintName = "SoundCloudKit-iOS"
                ReferencedContainer = "container:SoundCloudKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "67F59C2C1AB9C84A0018DA25"
-               BuildableName = "SoundCloudKit-MacTests.xctest"
-               BlueprintName = "SoundCloudKit-MacTests"
+               BlueprintIdentifier = "67F59BF41AB9C5970018DA25"
+               BuildableName = "SoundCloudKit-iOSTests.xctest"
+               BlueprintName = "SoundCloudKit-iOSTests"
                ReferencedContainer = "container:SoundCloudKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "67F59C221AB9C8490018DA25"
+            BlueprintIdentifier = "67F59BE91AB9C5960018DA25"
             BuildableName = "SoundCloudKit.framework"
-            BlueprintName = "SoundCloudKitMac"
+            BlueprintName = "SoundCloudKit-iOS"
             ReferencedContainer = "container:SoundCloudKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -78,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "67F59C221AB9C8490018DA25"
+            BlueprintIdentifier = "67F59BE91AB9C5960018DA25"
             BuildableName = "SoundCloudKit.framework"
-            BlueprintName = "SoundCloudKitMac"
+            BlueprintName = "SoundCloudKit-iOS"
             ReferencedContainer = "container:SoundCloudKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -96,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "67F59C221AB9C8490018DA25"
+            BlueprintIdentifier = "67F59BE91AB9C5960018DA25"
             BuildableName = "SoundCloudKit.framework"
-            BlueprintName = "SoundCloudKitMac"
+            BlueprintName = "SoundCloudKit-iOS"
             ReferencedContainer = "container:SoundCloudKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
