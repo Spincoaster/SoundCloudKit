@@ -9,15 +9,15 @@
 import SwiftyJSON
 
 public enum PlaylistType: String {
-    case EPSingle     = "ep single"
-    case Album        = "album"
-    case Compilation  = "compilation"
-    case ProjectFiles = "project files"
-    case Archive      = "archive"
-    case Showcase     = "showcase"
-    case Demo         = "demo"
-    case SamplePack   = "sample pack"
-    case Other        = "other"
+    case ep_single     = "ep single"
+    case album         = "album"
+    case compilation   = "compilation"
+    case project_files = "project files"
+    case archive       = "archive"
+    case showcase      = "showcase"
+    case demo          = "demo"
+    case sample_pack   = "sample pack"
+    case other         = "other"
 }
 
 public struct Playlist: Hashable, Equatable, JSONInitializable {

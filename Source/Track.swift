@@ -11,59 +11,59 @@ import Breit
 
 
 public enum Sharing: String {
-    case Public  = "public"
-    case Private = "private"
+    case `public`  = "public"
+    case `private` = "private"
 }
 
 public enum EmbeddableBy: String {
-    case All  = "all"
-    case Me   = "me"
-    case None = "none"
+    case all  = "all"
+    case me   = "me"
+    case none = "none"
 }
 
 public enum EncodingState: String {
-    case Processing = "processing"
-    case Failed     = "failed"
-    case Finished   = "finished"
+    case processing = "processing"
+    case failed     = "failed"
+    case finished   = "finished"
 }
 
 public enum License: String {
-    case NoRightsReserved  = "no-rights-reserved"
-    case AllRightsReserved = "all-rights-reserved"
-    case CcBy              = "cc-by"
-    case CcByNc            = "cc-by-nc"
-    case CcByNd            = "cc-by-nd"
-    case CcBySa            = "cc-by-sa"
-    case CcByNcNd          = "cc-by-nc-nd"
-    case CcByNcSa          = "cc-by-nc-sa"
+    case no_rights_reserved  = "no-rights-reserved"
+    case all_rights_reserved = "all-rights-reserved"
+    case cc_by               = "cc-by"
+    case cc_by_nc            = "cc-by-nc"
+    case cc_by_nd            = "cc-by-nd"
+    case cc_by_sa            = "cc-by-sa"
+    case cc_by_nc_nd         = "cc-by-nc-nd"
+    case cc_by_nc_sa         = "cc-by-nc-sa"
 }
 
 public enum TrackType: String {
-    case Original    = "original"
-    case Remix       = "remix"
-    case Live        = "live"
-    case Recording   = "recording"
-    case Spoken      = "spoken"
-    case Podcast     = "podcast"
-    case Demo        = "demo"
-    case InProgress  = "in progress"
-    case Stem        = "stem"
-    case Loop        = "loop"
-    case SoundEffect = "sound effect"
-    case Sample      = "sample"
-    case Other       = "other"
+    case original     = "original"
+    case remix        = "remix"
+    case live         = "live"
+    case recording    = "recording"
+    case spoken       = "spoken"
+    case podcast      = "podcast"
+    case demo         = "demo"
+    case in_progress  = "in progress"
+    case stem         = "stem"
+    case loop         = "loop"
+    case sound_effect = "sound effect"
+    case sample       = "sample"
+    case other        = "other"
 }
 
 public enum ArtworkType: String {
-    case T500x500  = "t500x500"
-    case Crop      = "crop"
-    case T300x300  = "t300x300"
-    case Large     = "large"
-    case T67x67    = "t67x67"
-    case Badge     = "badge"
-    case Small     = "small"
-    case Tiny      = "tiny"
-    case Mini      = "mini"
+    case t500x500  = "t500x500"
+    case crop      = "crop"
+    case t300x300  = "t300x300"
+    case large     = "large"
+    case t67x67    = "t67x67"
+    case badge     = "badge"
+    case small     = "small"
+    case tiny      = "tiny"
+    case mini      = "mini"
 }
 
 public struct Track: Hashable, Equatable, JSONInitializable {
@@ -128,7 +128,7 @@ public struct Track: Hashable, Equatable, JSONInitializable {
     }
 
     public var artworkURL: URL? {
-        return getArtworURL(.T500x500)
+        return getArtworURL(.t500x500)
     }
 
     public func getArtworURL(_ type: ArtworkType) -> URL? {

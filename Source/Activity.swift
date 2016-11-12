@@ -23,22 +23,22 @@ public struct ActivityList: JSONInitializable {
 }
 
 public enum ActivityType: String {
-    case Track          = "track"
-    case TrackRepost    = "track-repost"
-    case TrackSharing   = "track-sharing"
-    case Comment        = "comment"
-    case Favoriting     = "favoriting"
-    case Playlist       = "playlist"
-    case PlaylistRepost = "playlist-repost"
+    case track          = "track"
+    case trackRepost    = "track-repost"
+    case trackSharing   = "track-sharing"
+    case comment        = "comment"
+    case favoriting     = "favoriting"
+    case playlist       = "playlist"
+    case playlistRepost = "playlist-repost"
 }
 
 public struct Activity: JSONInitializable  {
     public enum TagType: String {
-        case Exclusive    = "exclusive"
-        case Affiliated   = "affiliated"
-        case First        = "first"
-        case Own          = "own"
-        case Conversation = "conversation"
+        case exclusive    = "exclusive"
+        case affiliated   = "affiliated"
+        case first        = "first"
+        case own          = "own"
+        case conversation = "conversation"
     }
     public enum Origin {
         case track(SoundCloudKit.Track)
@@ -54,9 +54,9 @@ public struct Activity: JSONInitializable  {
         createdAt = json["created_at"].stringValue
         tags      = json["tags"].arrayValue.map { TagType(rawValue: $0.stringValue)! }
         switch type {
-        case .Playlist:
+        case .playlist:
             origin    = Origin.playlist(Playlist(json: json["origin"]))
-        case .PlaylistRepost:
+        case .playlistRepost:
             origin    = Origin.playlist(Playlist(json: json["origin"]))
         default:
             origin    = Origin.track(Track(json: json["origin"]))
