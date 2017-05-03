@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6736D01F1B86D32600CCDD80 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6736D01E1B86D32600CCDD80 /* APIClient.swift */; };
+		674293941EB9BAD300E95148 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674293931EB9BAD300E95148 /* StringExtension.swift */; };
+		674293951EB9BAD300E95148 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674293931EB9BAD300E95148 /* StringExtension.swift */; };
+		674293961EB9BAD300E95148 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674293931EB9BAD300E95148 /* StringExtension.swift */; };
+		674293971EB9BAD300E95148 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674293931EB9BAD300E95148 /* StringExtension.swift */; };
 		677739AE1ABC541200E7BC8E /* SoundCloudKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739A41ABC488F00E7BC8E /* SoundCloudKitTests.swift */; };
 		677739C31ABD7AEF00E7BC8E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C11ABD7AEF00E7BC8E /* Alamofire.framework */; };
 		677739C41ABD7AEF00E7BC8E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C21ABD7AEF00E7BC8E /* SwiftyJSON.framework */; };
@@ -185,6 +189,7 @@
 
 /* Begin PBXFileReference section */
 		6736D01E1B86D32600CCDD80 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = Source/APIClient.swift; sourceTree = SOURCE_ROOT; };
+		674293931EB9BAD300E95148 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Source/StringExtension.swift; sourceTree = SOURCE_ROOT; };
 		6777399B1ABC487400E7BC8E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
 		6777399D1ABC487C00E7BC8E /* SoundCloudKit-macOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SoundCloudKit-macOS.h"; path = "Source/SoundCloudKit-macOS.h"; sourceTree = SOURCE_ROOT; };
 		6777399E1ABC487C00E7BC8E /* SoundCloudKit-iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SoundCloudKit-iOS.h"; path = "Source/SoundCloudKit-iOS.h"; sourceTree = SOURCE_ROOT; };
@@ -407,6 +412,7 @@
 				67F59C071AB9C5F00018DA25 /* Model */,
 				67F59C061AB9C5E50018DA25 /* Net */,
 				67F59BED1AB9C5960018DA25 /* Supporting Files */,
+				674293931EB9BAD300E95148 /* StringExtension.swift */,
 			);
 			name = Source;
 			path = SoundCloudKit;
@@ -767,6 +773,7 @@
 				67E5EA5E1DCAC9DF001CF873 /* Track.swift in Sources */,
 				67E5EA5F1DCAC9DF001CF873 /* User.swift in Sources */,
 				67E5EA601DCAC9DF001CF873 /* App.swift in Sources */,
+				674293961EB9BAD300E95148 /* StringExtension.swift in Sources */,
 				67E5EA611DCAC9DF001CF873 /* Playlist.swift in Sources */,
 				67E5EA621DCAC9DF001CF873 /* Comment.swift in Sources */,
 				67E5EA631DCAC9DF001CF873 /* Activity.swift in Sources */,
@@ -792,6 +799,7 @@
 				67E5EA871DCACB31001CF873 /* User.swift in Sources */,
 				67E5EA881DCACB31001CF873 /* App.swift in Sources */,
 				67E5EA891DCACB31001CF873 /* Playlist.swift in Sources */,
+				674293971EB9BAD300E95148 /* StringExtension.swift in Sources */,
 				67E5EA8A1DCACB31001CF873 /* Comment.swift in Sources */,
 				67E5EA8B1DCACB31001CF873 /* Activity.swift in Sources */,
 				67E5EA681DCAC9EB001CF873 /* APIClient.swift in Sources */,
@@ -806,6 +814,7 @@
 				67773A0D1ABDB73000E7BC8E /* User.swift in Sources */,
 				67D41D151B8DCBD30082454F /* Activity.swift in Sources */,
 				6778C8621B87493500ED627F /* Comment.swift in Sources */,
+				674293941EB9BAD300E95148 /* StringExtension.swift in Sources */,
 				67773A0E1ABDB73000E7BC8E /* App.swift in Sources */,
 				6736D01F1B86D32600CCDD80 /* APIClient.swift in Sources */,
 				67773A161ABE7CC000E7BC8E /* Playlist.swift in Sources */,
@@ -832,6 +841,7 @@
 				67E494191BAB0A0D00695CA2 /* Activity.swift in Sources */,
 				67E494171BAB0A0000695CA2 /* APIClient.swift in Sources */,
 				677739E31ABD9F7400E7BC8E /* App.swift in Sources */,
+				674293951EB9BAD300E95148 /* StringExtension.swift in Sources */,
 				677739D21ABD898B00E7BC8E /* User.swift in Sources */,
 				677739DD1ABD8B4D00E7BC8E /* Track.swift in Sources */,
 				67773A171ABE7CC000E7BC8E /* Playlist.swift in Sources */,
