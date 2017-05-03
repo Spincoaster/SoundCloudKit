@@ -1326,6 +1326,7 @@
 				67E5EA491DCAC44B001CF873 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		67E5EA4A1DCAC44B001CF873 /* Build configuration list for PBXNativeTarget "SoundCloudKit-tvOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1334,6 +1335,7 @@
 				67E5EA4C1DCAC44B001CF873 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		67E5EA571DCAC45C001CF873 /* Build configuration list for PBXNativeTarget "SoundCloudKit-watchOS" */ = {
 			isa = XCConfigurationList;
@@ -1342,6 +1344,7 @@
 				67E5EA591DCAC45C001CF873 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		67F59BE41AB9C5960018DA25 /* Build configuration list for PBXProject "SoundCloudKit" */ = {
 			isa = XCConfigurationList;
