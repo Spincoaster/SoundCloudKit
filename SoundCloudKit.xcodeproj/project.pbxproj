@@ -56,14 +56,9 @@
 		67773A221ABEA98A00E7BC8E /* PlaylistSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A211ABEA98A00E7BC8E /* PlaylistSpec.swift */; };
 		67773A231ABEA98A00E7BC8E /* PlaylistSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A211ABEA98A00E7BC8E /* PlaylistSpec.swift */; };
 		6778C8621B87493500ED627F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6778C8611B87493500ED627F /* Comment.swift */; };
-		67916DA91BAEB2A3004419B0 /* Breit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67D41D0E1B8A15070082454F /* Breit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		67916DAA1BAEB2AB004419B0 /* Breit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D41D0C1B8A146D0082454F /* Breit.framework */; };
-		67916DAB1BAEB2AF004419B0 /* Breit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67D41D0C1B8A146D0082454F /* Breit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		67916DAC1BAEB2B5004419B0 /* Breit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D41D0C1B8A146D0082454F /* Breit.framework */; };
 		67916DAD1BAEB2E8004419B0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C61ABD7B3000E7BC8E /* Alamofire.framework */; };
 		67916DAE1BAEB30F004419B0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739C11ABD7AEF00E7BC8E /* Alamofire.framework */; };
 		67916DAF1BAEB316004419B0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677739E81ABDA7F300E7BC8E /* Nimble.framework */; };
-		67D41D0F1B8A15070082454F /* Breit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D41D0E1B8A15070082454F /* Breit.framework */; };
 		67D41D151B8DCBD30082454F /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D41D141B8DCBD30082454F /* Activity.swift */; };
 		67E494171BAB0A0000695CA2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6736D01E1B86D32600CCDD80 /* APIClient.swift */; };
 		67E494181BAB0A0D00695CA2 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6778C8611B87493500ED627F /* Comment.swift */; };
@@ -84,12 +79,10 @@
 		67E5EA681DCAC9EB001CF873 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6736D01E1B86D32600CCDD80 /* APIClient.swift */; };
 		67E5EA691DCAC9F1001CF873 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6736D01E1B86D32600CCDD80 /* APIClient.swift */; };
 		67E5EA6D1DCACA13001CF873 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E5EA6A1DCACA13001CF873 /* Alamofire.framework */; };
-		67E5EA6E1DCACA13001CF873 /* Breit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E5EA6B1DCACA13001CF873 /* Breit.framework */; };
 		67E5EA6F1DCACA13001CF873 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E5EA6C1DCACA13001CF873 /* SwiftyJSON.framework */; };
 		67E5EA731DCACA58001CF873 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E5EA711DCACA58001CF873 /* Nimble.framework */; };
 		67E5EA741DCACA58001CF873 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E5EA721DCACA58001CF873 /* Quick.framework */; };
 		67E5EA751DCACA60001CF873 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E5EA6A1DCACA13001CF873 /* Alamofire.framework */; };
-		67E5EA761DCACA60001CF873 /* Breit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E5EA6B1DCACA13001CF873 /* Breit.framework */; };
 		67E5EA771DCACA60001CF873 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E5EA6C1DCACA13001CF873 /* SwiftyJSON.framework */; };
 		67E5EA781DCACA6D001CF873 /* UserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A0F1ABE5F7100E7BC8E /* UserSpec.swift */; };
 		67E5EA791DCACA6D001CF873 /* TrackSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67773A121ABE602300E7BC8E /* TrackSpec.swift */; };
@@ -101,7 +94,6 @@
 		67E5EA801DCACAD0001CF873 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67E5EA711DCACA58001CF873 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67E5EA811DCACAD0001CF873 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67E5EA721DCACA58001CF873 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67E5EA821DCACAD0001CF873 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67E5EA6A1DCACA13001CF873 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		67E5EA831DCACAD0001CF873 /* Breit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67E5EA6B1DCACA13001CF873 /* Breit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67E5EA841DCACAD0001CF873 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67E5EA6C1DCACA13001CF873 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67E5EA851DCACADA001CF873 /* SoundCloudKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 67E5EA361DCAC44A001CF873 /* SoundCloudKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67E5EA861DCACB31001CF873 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677739DB1ABD8B4D00E7BC8E /* Track.swift */; };
@@ -111,7 +103,6 @@
 		67E5EA8A1DCACB31001CF873 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6778C8611B87493500ED627F /* Comment.swift */; };
 		67E5EA8B1DCACB31001CF873 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D41D141B8DCBD30082454F /* Activity.swift */; };
 		67E5EA8F1DCACB4D001CF873 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E5EA8C1DCACB4D001CF873 /* Alamofire.framework */; };
-		67E5EA901DCACB4D001CF873 /* Breit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E5EA8D1DCACB4D001CF873 /* Breit.framework */; };
 		67E5EA911DCACB4D001CF873 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E5EA8E1DCACB4D001CF873 /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
@@ -147,7 +138,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				67E5EA5C1DCAC843001CF873 /* SoundCloudKit.framework in CopyFiles */,
-				67916DA91BAEB2A3004419B0 /* Breit.framework in CopyFiles */,
 				677739FB1ABDAF2100E7BC8E /* SwiftyJSON.framework in CopyFiles */,
 				677739FC1ABDAF2100E7BC8E /* Alamofire.framework in CopyFiles */,
 				677739FD1ABDAF2100E7BC8E /* Quick.framework in CopyFiles */,
@@ -166,7 +156,6 @@
 				67773A091ABDB5BF00E7BC8E /* Alamofire.framework in CopyFiles */,
 				67773A0A1ABDB5BF00E7BC8E /* Quick.framework in CopyFiles */,
 				67773A0B1ABDB5BF00E7BC8E /* Nimble.framework in CopyFiles */,
-				67916DAB1BAEB2AF004419B0 /* Breit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +169,6 @@
 				67E5EA801DCACAD0001CF873 /* Nimble.framework in CopyFiles */,
 				67E5EA811DCACAD0001CF873 /* Quick.framework in CopyFiles */,
 				67E5EA821DCACAD0001CF873 /* Alamofire.framework in CopyFiles */,
-				67E5EA831DCACAD0001CF873 /* Breit.framework in CopyFiles */,
 				67E5EA841DCACAD0001CF873 /* SwiftyJSON.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,8 +204,6 @@
 		67773A1E1ABEA8CB00E7BC8E /* playlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = playlist.json; path = Fixture/playlist.json; sourceTree = "<group>"; };
 		67773A211ABEA98A00E7BC8E /* PlaylistSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaylistSpec.swift; path = Spec/PlaylistSpec.swift; sourceTree = SOURCE_ROOT; };
 		6778C8611B87493500ED627F /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = Source/Comment.swift; sourceTree = SOURCE_ROOT; };
-		67D41D0C1B8A146D0082454F /* Breit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Breit.framework; path = Carthage/Build/iOS/Breit.framework; sourceTree = "<group>"; };
-		67D41D0E1B8A15070082454F /* Breit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Breit.framework; path = Carthage/Build/Mac/Breit.framework; sourceTree = "<group>"; };
 		67D41D141B8DCBD30082454F /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Activity.swift; path = Source/Activity.swift; sourceTree = SOURCE_ROOT; };
 		67E5EA361DCAC44A001CF873 /* SoundCloudKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E5EA381DCAC44A001CF873 /* SoundCloudKit-tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SoundCloudKit-tvOS.h"; path = "Source/SoundCloudKit-tvOS.h"; sourceTree = SOURCE_ROOT; };
@@ -225,12 +211,10 @@
 		67E5EA521DCAC45C001CF873 /* SoundCloudKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E5EA541DCAC45C001CF873 /* SoundCloudKit-watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SoundCloudKit-watchOS.h"; path = "Source/SoundCloudKit-watchOS.h"; sourceTree = SOURCE_ROOT; };
 		67E5EA6A1DCACA13001CF873 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
-		67E5EA6B1DCACA13001CF873 /* Breit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Breit.framework; path = Carthage/Build/tvOS/Breit.framework; sourceTree = "<group>"; };
 		67E5EA6C1DCACA13001CF873 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/tvOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		67E5EA711DCACA58001CF873 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
 		67E5EA721DCACA58001CF873 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
 		67E5EA8C1DCACB4D001CF873 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/watchOS/Alamofire.framework; sourceTree = "<group>"; };
-		67E5EA8D1DCACB4D001CF873 /* Breit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Breit.framework; path = Carthage/Build/watchOS/Breit.framework; sourceTree = "<group>"; };
 		67E5EA8E1DCACB4D001CF873 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/watchOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		67F59BEA1AB9C5960018DA25 /* SoundCloudKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F59BF51AB9C5970018DA25 /* SoundCloudKit-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SoundCloudKit-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,7 +228,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				67E5EA6D1DCACA13001CF873 /* Alamofire.framework in Frameworks */,
-				67E5EA6E1DCACA13001CF873 /* Breit.framework in Frameworks */,
 				67E5EA6F1DCACA13001CF873 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,7 +237,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				67E5EA751DCACA60001CF873 /* Alamofire.framework in Frameworks */,
-				67E5EA761DCACA60001CF873 /* Breit.framework in Frameworks */,
 				67E5EA771DCACA60001CF873 /* SwiftyJSON.framework in Frameworks */,
 				67E5EA3F1DCAC44B001CF873 /* SoundCloudKit.framework in Frameworks */,
 				67E5EA731DCACA58001CF873 /* Nimble.framework in Frameworks */,
@@ -267,7 +249,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				67E5EA8F1DCACB4D001CF873 /* Alamofire.framework in Frameworks */,
-				67E5EA901DCACB4D001CF873 /* Breit.framework in Frameworks */,
 				67E5EA911DCACB4D001CF873 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +270,6 @@
 				677739E71ABDA7F300E7BC8E /* SwiftyJSON.framework in Frameworks */,
 				67916DAF1BAEB316004419B0 /* Nimble.framework in Frameworks */,
 				67916DAE1BAEB30F004419B0 /* Alamofire.framework in Frameworks */,
-				67916DAA1BAEB2AB004419B0 /* Breit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +277,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67D41D0F1B8A15070082454F /* Breit.framework in Frameworks */,
 				677739C81ABD7B3000E7BC8E /* Alamofire.framework in Frameworks */,
 				677739C91ABD7B3000E7BC8E /* SwiftyJSON.framework in Frameworks */,
 			);
@@ -310,7 +289,6 @@
 				677739F51ABDADD000E7BC8E /* Nimble.framework in Frameworks */,
 				677739F61ABDADD000E7BC8E /* Quick.framework in Frameworks */,
 				67916DAD1BAEB2E8004419B0 /* Alamofire.framework in Frameworks */,
-				67916DAC1BAEB2B5004419B0 /* Breit.framework in Frameworks */,
 				677739F21ABDADCF00E7BC8E /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,15 +296,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		677739C51ABD7AFC00E7BC8E /* Frameworks */ = {
+		674293981EB9C2CC00E95148 /* watchOS */ = {
 			isa = PBXGroup;
 			children = (
 				67E5EA8C1DCACB4D001CF873 /* Alamofire.framework */,
-				67E5EA8D1DCACB4D001CF873 /* Breit.framework */,
 				67E5EA8E1DCACB4D001CF873 /* SwiftyJSON.framework */,
+			);
+			name = watchOS;
+			sourceTree = "<group>";
+		};
+		677739C51ABD7AFC00E7BC8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
 				677739FA1ABDAEC900E7BC8E /* iOS */,
 				677739F91ABDAEC300E7BC8E /* Mac */,
 				67E5EA701DCACA23001CF873 /* tvOS */,
+				674293981EB9C2CC00E95148 /* watchOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -344,7 +329,6 @@
 		677739F91ABDAEC300E7BC8E /* Mac */ = {
 			isa = PBXGroup;
 			children = (
-				67D41D0E1B8A15070082454F /* Breit.framework */,
 				677739C71ABD7B3000E7BC8E /* SwiftyJSON.framework */,
 				677739C61ABD7B3000E7BC8E /* Alamofire.framework */,
 				677739F41ABDADD000E7BC8E /* Quick.framework */,
@@ -356,7 +340,6 @@
 		677739FA1ABDAEC900E7BC8E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				67D41D0C1B8A146D0082454F /* Breit.framework */,
 				677739C21ABD7AEF00E7BC8E /* SwiftyJSON.framework */,
 				677739C11ABD7AEF00E7BC8E /* Alamofire.framework */,
 				677739E91ABDA7F300E7BC8E /* Quick.framework */,
@@ -371,7 +354,6 @@
 				67E5EA711DCACA58001CF873 /* Nimble.framework */,
 				67E5EA721DCACA58001CF873 /* Quick.framework */,
 				67E5EA6A1DCACA13001CF873 /* Alamofire.framework */,
-				67E5EA6B1DCACA13001CF873 /* Breit.framework */,
 				67E5EA6C1DCACA13001CF873 /* SwiftyJSON.framework */,
 			);
 			name = tvOS;
