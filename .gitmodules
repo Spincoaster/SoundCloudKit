@@ -10,6 +10,3 @@
 [submodule "Carthage/Checkouts/Nimble"]
 	path = Carthage/Checkouts/Nimble
 	url = https://github.com/Quick/Nimble.git
-[submodule "Carthage/Checkouts/Breit"]
-	path = Carthage/Checkouts/Breit
-	url = https://github.com/kumabook/Breit.git
