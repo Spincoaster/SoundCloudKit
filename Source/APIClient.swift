@@ -20,26 +20,27 @@ open class APIClient {
 
     open var manager: Alamofire.SessionManager
 
-    open static var clientId     = ""
     open static var baseURLString = "https://api.soundcloud.com"
-    open static var accessToken: AccessToken?
     open static var shared: APIClient = APIClient()
 
-    open class var isLoggedIn: Bool { return accessToken != nil }
+    open var clientId = ""
+    open var accessToken: AccessToken?
+    open var isLoggedIn: Bool { return accessToken != nil }
 
     public init() {
         manager = Alamofire.SessionManager(configuration: URLSessionConfiguration.ephemeral)
     }
 
     open func fetch(_ route: Router, callback: @escaping RequestCallback) {
-        self.manager.request(route).validate(statusCode: 200..<300).responseJSON(options: .allowFragments) { response in
+        self.manager.request(RouterRequest(router: route, client: self))
+            .validate(statusCode: 200..<300).responseJSON(options: .allowFragments) { response in
             callback(response.request, response.response, response.result)
         }
     }
 
     open func fetchItem<T: JSONInitializable>(_ route: Router, callback: @escaping (URLRequest?, HTTPURLResponse?, Result<T>) -> Void) {
         manager
-            .request(route)
+            .request(RouterRequest(router: route, client: self))
             .validate(statusCode: 200..<300)
             .responseJSON(options: .allowFragments) { response in
                 if let e = response.result.error {
@@ -52,7 +53,7 @@ open class APIClient {
 
     open func fetchItems<T: JSONInitializable>(_ route: Router, callback: @escaping (URLRequest?, HTTPURLResponse?, Result<[T]>) -> Void) {
         manager
-            .request(route)
+            .request(RouterRequest(router: route, client: self))
             .validate(statusCode: 200..<300)
             .responseJSON(options: .allowFragments) { response in
                 if let e = response.result.error {
@@ -63,7 +64,7 @@ open class APIClient {
         }
     }
 
-    public enum Router: URLRequestConvertible {
+    public enum Router {
         /* connect */
 //        case Connect
         /* users */
@@ -170,15 +171,20 @@ open class APIClient {
             case .futureActivities(_): return true
             }
         }
-        public func asURLRequest() throws -> URLRequest {
-            var req = URLRequest(url: url)
-            req.httpMethod = method.rawValue
-            var params = self.params
-            params["client_id"] = clientId as AnyObject?
-            if let token = APIClient.accessToken, self.needsOAuthToken {
-                params["oauth_token"] = token as AnyObject?
-            }
-            return try URLEncoding.default.encode(req, with: params)
+    }
+}
+
+internal struct RouterRequest: URLRequestConvertible {
+    var router: APIClient.Router
+    var client: APIClient
+    public func asURLRequest() throws -> URLRequest {
+        var req = URLRequest(url: router.url)
+        req.httpMethod = router.method.rawValue
+        var params = router.params
+        params["client_id"] = client.clientId as AnyObject?
+        if let token = client.accessToken, router.needsOAuthToken {
+            params["oauth_token"] = token as AnyObject?
         }
+        return try URLEncoding.default.encode(req, with: params)
     }
 }
