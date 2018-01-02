@@ -31,15 +31,15 @@ open class APIClient {
         manager = Alamofire.SessionManager(configuration: URLSessionConfiguration.ephemeral)
     }
 
-    open func fetch(_ route: Router, callback: @escaping RequestCallback) {
-        self.manager.request(RouterRequest(router: route, client: self))
+    open func fetch(_ route: Router, callback: @escaping RequestCallback) -> DataRequest {
+        return self.manager.request(RouterRequest(router: route, client: self))
             .validate(statusCode: 200..<300).responseJSON(options: .allowFragments) { response in
             callback(response.request, response.response, response.result)
         }
     }
 
-    open func fetchItem<T: JSONInitializable>(_ route: Router, callback: @escaping (URLRequest?, HTTPURLResponse?, Result<T>) -> Void) {
-        manager
+    open func fetchItem<T: JSONInitializable>(_ route: Router, callback: @escaping (URLRequest?, HTTPURLResponse?, Result<T>) -> Void) -> DataRequest {
+        return manager
             .request(RouterRequest(router: route, client: self))
             .validate(statusCode: 200..<300)
             .responseJSON(options: .allowFragments) { response in
@@ -51,8 +51,8 @@ open class APIClient {
         }
     }
 
-    open func fetchItems<T: JSONInitializable>(_ route: Router, callback: @escaping (URLRequest?, HTTPURLResponse?, Result<[T]>) -> Void) {
-        manager
+    open func fetchItems<T: JSONInitializable>(_ route: Router, callback: @escaping (URLRequest?, HTTPURLResponse?, Result<[T]>) -> Void) -> DataRequest {
+        return manager
             .request(RouterRequest(router: route, client: self))
             .validate(statusCode: 200..<300)
             .responseJSON(options: .allowFragments) { response in
