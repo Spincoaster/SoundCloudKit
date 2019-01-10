@@ -20,8 +20,8 @@ open class APIClient {
 
     open var manager: Alamofire.SessionManager
 
-    open static var baseURLString = "https://api.soundcloud.com"
-    open static var shared: APIClient = APIClient()
+    public static var baseURLString = "https://api.soundcloud.com"
+    public static var shared: APIClient = APIClient()
 
     open var clientId = ""
     open var accessToken: AccessToken?
